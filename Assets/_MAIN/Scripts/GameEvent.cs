@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameEvent", order = 1)]
 public class GameEvent : ScriptableObject
 {
     private event Action action = delegate { };
