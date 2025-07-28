@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
 
     [Tooltip("Debugging")]
     [SerializeField] GameObject selectedObj;
-    RunManager runManager;
+    CashManager runManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        runManager = RunManager.Instance;
+        runManager = CashManager.Instance;
     }
 
     // Update is called once per frame
@@ -58,12 +58,12 @@ public class Player : MonoBehaviour
             {
                 case InteractType.AddCash:
                     if (cash == null) Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
-                    runManager.currentChangeAmount += selectedObj.GetComponent<CashObject>().cashAmount;
+                    runManager.AddCash(cash.cashAmount);
                     break;
 
                 case InteractType.RemoveCash:
                     if (cash == null) Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
-                    runManager.currentChangeAmount -= selectedObj.GetComponent<CashObject>().cashAmount;
+                    runManager.RemoveCash(cash.cashAmount);
                     break;
 
                 case InteractType.ReturnCashButton:
