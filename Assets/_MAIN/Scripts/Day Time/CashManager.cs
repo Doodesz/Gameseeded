@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class CashManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class CashManager : MonoBehaviour
     [SerializeField] GameObject cash1StackPos;
     [SerializeField] GameObject cash10StackPos;
     [SerializeField] GameObject cash100StackPos;
+    [SerializeField] TextMeshPro cashRegOnCounterDisplayText;
+    [SerializeField] TextMeshPro cashRegChangeDisplayText;
 
     [Header("Parameters")]
     [SerializeField] float stackGap;
@@ -33,6 +36,8 @@ public class CashManager : MonoBehaviour
             Instance = this;
         else
             Destroy(Instance);
+
+        UpdateCashRegisterDisplay();
     }
 
     public void AddCash(int amount)
@@ -59,6 +64,7 @@ public class CashManager : MonoBehaviour
         }
 
         currentChangeAmount += amount;
+        UpdateCashRegisterDisplay();
     }
 
     public void RemoveCash(int amount)
@@ -85,6 +91,12 @@ public class CashManager : MonoBehaviour
         }
 
         currentChangeAmount -= amount;
+        UpdateCashRegisterDisplay();
+    }
+
+    void UpdateCashRegisterDisplay()
+    {
+        cashRegOnCounterDisplayText.text = currentChangeAmount.ToString();
     }
 
     void AddCash1ToStack()
