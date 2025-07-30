@@ -1,0 +1,53 @@
+using DialogueEditor;
+using UnityEngine;
+
+public class GameStateManager : MonoBehaviour
+{
+    public enum GameState { Playing, OnConversation, Paused };
+    public GameState gameState;
+    public static GameStateManager Instance;
+
+    private void OnEnable()
+    {
+        ConversationManager.OnConversationStarted += ConversationStartBehavior;
+        ConversationManager.OnConversationEnded += ConversationEndBehavior;
+    }
+    private void OnDisable()
+    {
+        ConversationManager.OnConversationStarted -= ConversationStartBehavior;
+        ConversationManager.OnConversationEnded -= ConversationEndBehavior;
+    }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (Instance != null) Destroy(this);
+        Instance = this;
+    }
+
+    void ConversationStartBehavior()
+    {
+        gameState = GameState.OnConversation;
+
+        ToggleCursor(true);
+    }
+
+    void ConversationEndBehavior()
+    {
+        gameState = GameState.Playing;
+
+        ToggleCursor(false);
+    }
+
+    void ToggleCursor(bool toggle)
+    {
+        FirstPersonController.Instance.cameraCanMove = !toggle;
+        FirstPersonController.Instance.enableZoom = !toggle;
+        FirstPersonController.Instance.lockCursor = !toggle;
+        Cursor.visible = toggle;
+        if(toggle)
+            Cursor.lockState = CursorLockMode.None;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
+    }
+}

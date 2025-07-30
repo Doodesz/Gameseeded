@@ -18,6 +18,8 @@ public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public static FirstPersonController Instance;
+
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -151,7 +153,10 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        if (Instance != null) Destroy(this);
+        Instance = this;
+
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }

@@ -6,8 +6,10 @@ using System.Collections.Generic;
 public class CustomerQueueManager : MonoBehaviour
 {
     [Header("Parameters")]
-    public Queue<GameObject> customerQueueList = new Queue<GameObject>();
-    private GameObject customerSpawnPoint;
+    public List<GameObject> customerQueueList = new List<GameObject>();
+    [SerializeField] private GameObject customerSpawnPoint;
+
+    public Queue<GameObject> customerQueue;
 
     private void OnEnable()
     {
@@ -20,21 +22,23 @@ public class CustomerQueueManager : MonoBehaviour
 
     private void Start()
     {
+        customerQueue = new Queue<GameObject>(customerQueueList);
+
         Events.onGetNextCustomer.Trigger();
     }
 
     public void GetNextCustomer()
     {
-        if (customerQueueList.Count > 0)
+        if (customerQueue.Count > 0)
         {
-            GameObject nextCustomerPrefab = customerQueueList.Peek();
+            GameObject nextCustomerPrefab = customerQueue.Peek();
             Instantiate(nextCustomerPrefab, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation);
 
-            customerQueueList.Dequeue();
+            customerQueue.Dequeue();
         }
         else
         {
-            Debug.LogError("ERROR: No content found in customerQueueList");
+            Debug.LogError("ERROR: No content found in customerQueue");
         }
     }
 }

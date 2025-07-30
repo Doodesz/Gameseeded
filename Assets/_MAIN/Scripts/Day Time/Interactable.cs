@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 public enum InteractType { AddCash, RemoveCash, SubmitChangeButton, TalkToCustomer };
+[RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour
 {
     [Header("Parameters")]
@@ -10,17 +11,22 @@ public class Interactable : MonoBehaviour
     [Header("References")]
     [SerializeField] private Outline outline;
 
-    private void Update()
+    private void OnEnable()
     {
-        OutlineBehaviour();
+        Events.onSelectNewInteractable.Add(OutlineBehaviour);
+    }
+    private void OnDisable()
+    {
+        Events.onSelectNewInteractable.Remove(OutlineBehaviour);
     }
 
     void OutlineBehaviour()
     {
-        if (Player.Instance.selectedObj == null) return;
-
         // De-outline the selected obj      
-        if (outline.enabled && Player.Instance.selectedObj != this.gameObject) outline.enabled = false; 
-
+        if (Player.Instance.selectedObj == this.gameObject) 
+            outline.enabled = true;
+        else if (outline.enabled && (Player.Instance.selectedObj != this.gameObject || Player.Instance.selectedObj == null)) 
+            outline.enabled = false;
+        //else Debug.LogWarning("WARNING: Unable to enable/disable Outline component of " + gameObject.name + "GameObject");
     }
 }

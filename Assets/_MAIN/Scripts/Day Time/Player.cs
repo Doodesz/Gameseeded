@@ -1,4 +1,4 @@
-using UnityEditor.PackageManager;
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,33 +25,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Always raycast to find an interactable object on reticle
-        bool isHit = Physics.Raycast(camObj.transform.position, camObj.transform.forward, out RaycastHit hitInfo);
-
-        // If selected object on reticle is interactable, select it
-        if (isHit && hitInfo.collider.gameObject.CompareTag("Interactable"))
+        if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing)
         {
-            if (hitInfo.collider.gameObject.TryGetComponent<Interactable>(out Interactable interactableScript) == false)
-                Debug.LogError("ERROR: Cannot get Interactable script Component of " + hitInfo.collider.gameObject.name);
+            // Always raycast to find an interactable object on reticle
+            bool isHit = Physics.Raycast(camObj.transform.position, camObj.transform.forward, out RaycastHit hitInfo);
 
-            // Select obj as current interactable
-            selectedObj = hitInfo.collider.gameObject;
+            // If selected object on reticle is interactable, select it
+            if (isHit && hitInfo.collider.gameObject.CompareTag("Interactable"))
+            {
+                if (hitInfo.collider.gameObject.TryGetComponent<Interactable>(out Interactable interactableScript) == false)
+                    Debug.LogError("ERROR: Cannot get Interactable script Component of " + hitInfo.collider.gameObject.name);
 
-            // Outline the selected obj
-            if (selectedObj.TryGetComponent<Outline>(out Outline outline) == false)
-                Debug.LogWarning("WARNING: Cannot get Outline component of " + selectedObj.name);
-            else outline.enabled = true;
-        }
+                // Select obj as current interactable
+                selectedObj = hitInfo.collider.gameObject;
 
-        // Else if not selecting any object, deselect previous selected object
-        else if (selectedObj != null)
-        {
-            // De-outline the selected obj
-            if (selectedObj.TryGetComponent<Outline>(out Outline outline) == false)
-                Debug.LogWarning("WARNING: Cannot get Outline component of " + selectedObj.name);
-            else outline.enabled = false;
+                // Outline the selected obj
+                if (selectedObj.TryGetComponent<Outline>(out Outline outline) == false)
+                    Debug.LogWarning("WARNING: Cannot get Outline component of " + selectedObj.name);
+                else outline.enabled = true;
 
-            selectedObj = null;
+                Events.onSelectNewInteractable.Trigger();
+            }
+
+            // Else if not selecting any object, deselect previous selected object
+            else if (selectedObj != null)
+            {
+                // De-outline the selected obj
+                if (selectedObj.TryGetComponent<Outline>(out Outline outline) == false)
+                    Debug.LogWarning("WARNING: Cannot get Outline component of " + selectedObj.name);
+                else outline.enabled = false;
+
+                selectedObj = null;
+
+                Events.onSelectNewInteractable.Trigger();
+            }
         }
     }
 
@@ -68,6 +75,7 @@ public class Player : MonoBehaviour
 
             InteractType interactType = interactableScript.thisTypeOfInteractable;
             selectedObj.TryGetComponent<CashObject>(out CashObject cash);
+            selectedObj.TryGetComponent<Customer>(out Customer customer);
 
             switch (interactType)
             {
@@ -91,6 +99,11 @@ public class Player : MonoBehaviour
 
                 case InteractType.SubmitChangeButton:
                     // submit change
+                    break;
+
+                case InteractType.TalkToCustomer:
+                    ConversationManager.Instance.StartConversation(customer.conversation);
+                    selectedObj = null;
                     break;
             }
         }
