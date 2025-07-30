@@ -6,6 +6,11 @@ using System.Collections;
 //[CreateAssetMenu(fileName = "Customer", menuName = "Scriptable Objects/Customer")]
 public class CustomerQueueManager : MonoBehaviour
 {
+    public enum CurrentCustomerStatus { None, Waiting };
+    public CurrentCustomerStatus status;
+
+    public static CustomerQueueManager Instance;
+
     [Header("Parameters")]
     public List<GameObject> customerQueueList = new List<GameObject>();
     [SerializeField] private GameObject customerSpawnPoint;
@@ -26,6 +31,9 @@ public class CustomerQueueManager : MonoBehaviour
         customerQueue = new Queue<GameObject>(customerQueueList);
 
         Events.onGetNextCustomer.Trigger();
+
+        if (Instance != null) Destroy(this);
+        Instance = this;
     }
 
     public void GetNextCustomer()
@@ -41,12 +49,16 @@ public class CustomerQueueManager : MonoBehaviour
         {
             Debug.LogError("ERROR: No content found in customerQueue");
         }
+
+        status = CurrentCustomerStatus.None;
     }
 
     IEnumerator InstantiateCustomerObject(GameObject objectToInstantiate)
     {
         yield return new WaitForSeconds(3f);
+
         Instantiate(objectToInstantiate, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation);
         Events.onCustomerCome.Trigger();
+        status = CurrentCustomerStatus.Waiting;
     }
 }

@@ -43,10 +43,13 @@ public class Customer : MonoBehaviour
         // put books on table
 
         CashManager.Instance.UpdateCashRegisterChangeDisplay(change.ToString());
+        CashManager.Instance.currentChangeNeeded = change;
     }
 
     void OnCustomerLeave()
     {
         // reset cash register display
+
+        Destroy(gameObject);
     }
 }

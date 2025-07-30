@@ -98,8 +98,10 @@ public class Player : MonoBehaviour
                     break;
 
                 case InteractType.SubmitChangeButton:
-                    // submit change
-                    break;
+                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCustomerStatus.Waiting)
+                        CashManager.Instance.SubmitCash();
+                    else Debug.Log("No customer present");
+                        break;
 
                 case InteractType.TalkToCustomer:
                     ConversationManager.Instance.StartConversation(customer.conversation);

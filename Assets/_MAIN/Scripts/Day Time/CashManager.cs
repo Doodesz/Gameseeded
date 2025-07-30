@@ -19,6 +19,7 @@ public class CashManager : MonoBehaviour
 
     [Header("Debugging")]
     public int currentChangeAmount;
+    public int currentChangeNeeded;
     public int cash1Amount;
     public int cash10Amount;
     public int cash100Amount;
@@ -36,6 +37,26 @@ public class CashManager : MonoBehaviour
         Instance = this;
 
         UpdateCashRegisterOnCounterDisplay();
+    }
+
+    public void SubmitCash()
+    {
+        if(currentChangeAmount == currentChangeNeeded)
+        {
+            // tambah populer
+            Debug.Log("Perfect!");
+        }
+        else
+        {
+            // berkurang populer
+            Debug.Log("Missed!");
+        }
+
+        Events.onCustomerLeave.Trigger();
+        Events.onGetNextCustomer.Trigger();
+
+        UpdateCashRegisterChangeDisplay("Waiting...");
+        UpdateCashRegisterOnCounterDisplay("Waiting...");
     }
 
     public void AddCash(int amount)
@@ -95,6 +116,10 @@ public class CashManager : MonoBehaviour
     void UpdateCashRegisterOnCounterDisplay()
     {
         cashRegOnCounterDisplayText.text = currentChangeAmount.ToString();
+    }
+    void UpdateCashRegisterOnCounterDisplay(string displayText)
+    {
+        cashRegOnCounterDisplayText.text = displayText;
     }
     public void UpdateCashRegisterChangeDisplay(string displayText)
     {
