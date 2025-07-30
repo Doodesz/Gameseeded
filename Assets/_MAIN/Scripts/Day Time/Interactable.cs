@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public enum InteractType { AddCash, RemoveCash, SubmitChangeButton };
+public enum InteractType { AddCash, RemoveCash, SubmitChangeButton, TalkToCustomer };
 public class Interactable : MonoBehaviour
 {
     [Header("Parameters")]

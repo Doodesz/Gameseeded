@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9188945971006870647}
   - component: {fileID: 3523357894968977416}
   - component: {fileID: 5794832220548066277}
-  - component: {fileID: 4510894335315909344}
+  - component: {fileID: 2135673448685365868}
   m_Layer: 0
   m_Name: Uang 100 Add
   m_TagString: Interactable
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisTypeOfInteractable: 0
-  outline: {fileID: 4510894335315909344}
+  outline: {fileID: 2135673448685365868}
 --- !u!114 &8436779446345476961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4510894335315909344
+--- !u!114 &2135673448685365868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
+  outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 7
   precomputeOutline: 0

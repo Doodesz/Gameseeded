@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameEvent", order = 1)]
-public class GameEvent : ScriptableObject
+public class GameEvent
 {
     private event Action action = delegate { };
 
-    public void Publish()
+    public void Trigger()
     {
         action?.Invoke();
     }
@@ -45,6 +44,9 @@ public class GameEvent<T>
 public partial class Events
 {
     public static readonly GameEvent<float> onChangeSubmit = new();
+    public static readonly GameEvent onGetNextCustomer = new();
+    public static readonly GameEvent onCustomerLeave = new();
+    public static readonly GameEvent onSelectNewInteractable = new();
     // public static readonly GameEvent onChangeSubmit = new();
     // public static readonly GameEvent<GameObject> onPickup = new();
 }
