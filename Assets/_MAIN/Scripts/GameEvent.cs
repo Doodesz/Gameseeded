@@ -45,6 +45,7 @@ public partial class Events
 {
     public static readonly GameEvent<float> onChangeSubmit = new();
     public static readonly GameEvent onGetNextCustomer = new();
+    public static readonly GameEvent onCustomerCome = new();
     public static readonly GameEvent onCustomerLeave = new();
     public static readonly GameEvent onSelectNewInteractable = new();
     public static readonly GameEvent onDialogueStart = new();

@@ -35,7 +35,7 @@ public class CashManager : MonoBehaviour
         if (Instance != null) Destroy(this);
         Instance = this;
 
-        UpdateCashRegisterDisplay();
+        UpdateCashRegisterOnCounterDisplay();
     }
 
     public void AddCash(int amount)
@@ -62,7 +62,7 @@ public class CashManager : MonoBehaviour
         }
 
         currentChangeAmount += amount;
-        UpdateCashRegisterDisplay();
+        UpdateCashRegisterOnCounterDisplay();
     }
 
     public void RemoveCash(int amount)
@@ -89,12 +89,16 @@ public class CashManager : MonoBehaviour
         }
 
         currentChangeAmount -= amount;
-        UpdateCashRegisterDisplay();
+        UpdateCashRegisterOnCounterDisplay();
     }
 
-    void UpdateCashRegisterDisplay()
+    void UpdateCashRegisterOnCounterDisplay()
     {
         cashRegOnCounterDisplayText.text = currentChangeAmount.ToString();
+    }
+    public void UpdateCashRegisterChangeDisplay(string displayText)
+    {
+        cashRegChangeDisplayText.text = displayText;
     }
 
     void AddCash1ToStack()

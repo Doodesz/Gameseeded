@@ -3,7 +3,32 @@ guid: 392d3e45442dda54d8bb97edcf195636
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hidung
+    second: {fileID: 2100000, guid: b4847b5f6d12f5441afa06e9596c8ff8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KulitSerigala
+    second: {fileID: 2100000, guid: 93c918de07f1f5a47b12e019b786cd67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mata
+    second: {fileID: 2100000, guid: b345ece270ebdc24ca6bea7cb7255491, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shine
+    second: {fileID: 2100000, guid: 766b1035c9ad55e41a057bf6f606f954, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TelingaHidung.001
+    second: {fileID: 2100000, guid: b163c91e416616b439d25f697c304d04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -30,7 +55,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1

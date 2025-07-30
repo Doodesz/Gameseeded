@@ -1,6 +1,7 @@
 using DialogueEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 //[CreateAssetMenu(fileName = "Customer", menuName = "Scriptable Objects/Customer")]
 public class CustomerQueueManager : MonoBehaviour
@@ -32,7 +33,7 @@ public class CustomerQueueManager : MonoBehaviour
         if (customerQueue.Count > 0)
         {
             GameObject nextCustomerPrefab = customerQueue.Peek();
-            Instantiate(nextCustomerPrefab, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation);
+            StartCoroutine(InstantiateCustomerObject(nextCustomerPrefab));
 
             customerQueue.Dequeue();
         }
@@ -40,5 +41,12 @@ public class CustomerQueueManager : MonoBehaviour
         {
             Debug.LogError("ERROR: No content found in customerQueue");
         }
+    }
+
+    IEnumerator InstantiateCustomerObject(GameObject objectToInstantiate)
+    {
+        yield return new WaitForSeconds(3f);
+        Instantiate(objectToInstantiate, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation);
+        Events.onCustomerCome.Trigger();
     }
 }
