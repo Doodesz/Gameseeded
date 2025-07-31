@@ -7,23 +7,27 @@ public class Customer : MonoBehaviour
 {
     [Header("References")]
     public NPCConversation conversation;
+    public Animator animator;
+    public Animator avatarAnimator;
+    [SerializeField] Collider interactCollider;
 
     [Header("Parameters")]
     // public List<GameObject> books;
     public int change;
     public CustomerType customerType;
 
+    [Header("Debugging")]
+    [SerializeField] private bool isCheckingOut;
+
     private void OnEnable()
     {
         Events.onCustomerCome.Add(OnCustomerCome);
-        Events.onCustomerLeave.Add(OnCustomerLeave);
-        Events.onGetNextCustomer.Add(OnCustomerSpawn);
+        Events.onGetNextCustomer.Add(OnGetNextCustomer);
     }
     private void OnDisable()
     {
         Events.onCustomerCome.Remove(OnCustomerCome);
-        Events.onCustomerLeave.Remove(OnCustomerLeave);
-        Events.onGetNextCustomer.Remove(OnCustomerSpawn);
+        Events.onGetNextCustomer.Remove(OnGetNextCustomer);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,25 +35,45 @@ public class Customer : MonoBehaviour
     {
         if (!TryGetComponent<Interactable>(out Interactable interactable))
             Debug.LogError("ERROR: GameObject " + gameObject.name + " has no Interactable script!");
+
+        isCheckingOut = false;
+
+        if (CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+            animator.SetBool("isCheckingOut", true);
+
+        interactCollider.enabled = false;
     }
 
-    void OnCustomerSpawn()
+    private void Update()
     {
-        // walk around first
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Waiting") || animator.GetCurrentAnimatorStateInfo(0).IsName("Waiting Checkout"))
+            avatarAnimator.SetBool("isWalking", false);
+        else
+            avatarAnimator.SetBool("isWalking", true);
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Waiting Checkout") && !isCheckingOut)
+        {
+            Events.onCustomerCome.Trigger();
+            isCheckingOut = true;
+        }
     }
 
     void OnCustomerCome()
     {
-        // put books on table
+        if (CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+        {
+            interactCollider.enabled = true;
 
-        CashManager.Instance.UpdateCashRegisterChangeDisplay(change.ToString());
-        CashManager.Instance.currentChangeNeeded = change;
+            // put books on table
+
+            CashManager.Instance.UpdateCashRegisterChangeDisplay(change.ToString());
+            CashManager.Instance.currentChangeNeeded = change;
+        }
     }
 
-    void OnCustomerLeave()
+    void OnGetNextCustomer()
     {
-        // reset cash register display
-
-        Destroy(gameObject);
+        if(CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+            animator.SetBool("isCheckingOut", true);
     }
 }

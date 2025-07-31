@@ -36,16 +36,10 @@ public class CashManager : MonoBehaviour
         if (Instance != null) Destroy(this);
         Instance = this;
 
-        UpdateCashRegisterOnCounterDisplay();
-    }
+        UpdateCashRegisterChangeDisplay("Menunggu...");
+        UpdateCashRegisterOnCounterDisplay("Menunggu...");
 
-    private void OnEnable()
-    {
-        Events.onChangeSubmit.Add(RemoveAllStack);
-    }
-    private void OnDisable()
-    {
-        Events.onChangeSubmit.Remove(RemoveAllStack);
+        currentChangeAmount = 0;
     }
 
     public void SubmitCash()
@@ -61,9 +55,8 @@ public class CashManager : MonoBehaviour
             Debug.Log("Missed!");
         }
 
-        Events.onCustomerLeave.Trigger();
-        Events.onGetNextCustomer.Trigger();
         Events.onChangeSubmit.Trigger();
+        RemoveAllCashStacks();
 
         UpdateCashRegisterChangeDisplay("Menunggu...");
         UpdateCashRegisterOnCounterDisplay("Menunggu...");
@@ -123,6 +116,7 @@ public class CashManager : MonoBehaviour
         UpdateCashRegisterOnCounterDisplay();
     }
 
+    #region Cash register display and Add/Remove Cash from stacks
     void UpdateCashRegisterOnCounterDisplay()
     {
         cashRegOnCounterDisplayText.text = currentChangeAmount.ToString();
@@ -170,9 +164,12 @@ public class CashManager : MonoBehaviour
         cash100Stacks.Pop();
         Destroy(cash);
     }
+    #endregion
 
-    void RemoveAllStack()
+    void RemoveAllCashStacks()
     {
+        currentChangeAmount = 0;
+
         // Destroy all the GameObjects in stacks content
         foreach(GameObject cash in cash1Stacks)
             Destroy(cash);

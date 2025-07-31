@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 7
   precomputeOutline: 0
@@ -134,8 +134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: {fileID: 2383360620139324001}
+  animator: {fileID: 0}
+  avatarAnimator: {fileID: 0}
   change: 1321
   customerType: 0
+  isCheckingOut: 0
 --- !u!136 &6134942397769931388
 CapsuleCollider:
   m_ObjectHideFlags: 0

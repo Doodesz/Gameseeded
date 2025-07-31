@@ -3,11 +3,10 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-//[CreateAssetMenu(fileName = "Customer", menuName = "Scriptable Objects/Customer")]
 public class CustomerQueueManager : MonoBehaviour
 {
-    public enum CurrentCustomerStatus { None, Waiting };
-    public CurrentCustomerStatus status;
+    public enum CurrentCashierStatus { Vacant, Occcupied };
+    public CurrentCashierStatus status;
 
     public static CustomerQueueManager Instance;
 
@@ -15,50 +14,84 @@ public class CustomerQueueManager : MonoBehaviour
     public List<GameObject> customerQueueList = new List<GameObject>();
     [SerializeField] private GameObject customerSpawnPoint;
 
-    public Queue<GameObject> customerQueue;
+    [Header("Debugging")]
+    [SerializeField] GameObject currentCustomer;
+    Queue<GameObject> customerQueue;
+    Queue<GameObject> customerWaitingToSpawn;
 
     private void OnEnable()
     {
-        Events.onGetNextCustomer.Add(GetNextCustomer);
+        Events.onCustomerCome.Add(OnCustomerCome);
+        Events.onChangeSubmit.Add(OnChangeSubmit);
     }
     private void OnDisable()
     {
-        Events.onGetNextCustomer.Remove(GetNextCustomer);
+        Events.onCustomerCome.Remove(OnCustomerCome);
+        Events.onChangeSubmit.Remove(OnChangeSubmit);
     }
 
     private void Start()
     {
-        customerQueue = new Queue<GameObject>(customerQueueList);
-
-        Events.onGetNextCustomer.Trigger();
-
         if (Instance != null) Destroy(this);
         Instance = this;
+
+        customerWaitingToSpawn = new Queue<GameObject>(customerQueueList);
+        customerQueue = new Queue<GameObject>();
+
+        SpawnCustomer();
+
+        currentCustomer = customerQueue.Peek();
+
+        InvokeRepeating("SpawnCustomer", 5f, 5f);
     }
 
-    public void GetNextCustomer()
+    void SpawnCustomer()
     {
-        if (customerQueue.Count > 0)
+        if (customerWaitingToSpawn.Count > 0)
         {
-            GameObject nextCustomerPrefab = customerQueue.Peek();
-            StartCoroutine(InstantiateCustomerObject(nextCustomerPrefab));
+            GameObject nextCustomerPrefab = customerWaitingToSpawn.Peek();
+            customerQueue.Enqueue(Instantiate(nextCustomerPrefab, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation));
 
-            customerQueue.Dequeue();
+            customerWaitingToSpawn.Dequeue();
         }
         else
         {
-            Debug.LogError("ERROR: No content found in customerQueue");
+            customerWaitingToSpawn.Clear();
         }
-
-        status = CurrentCustomerStatus.None;
     }
 
-    IEnumerator InstantiateCustomerObject(GameObject objectToInstantiate)
+    void OnCustomerCome()
     {
-        yield return new WaitForSeconds(3f);
+        status = CurrentCashierStatus.Occcupied;
+    }
 
-        Instantiate(objectToInstantiate, customerSpawnPoint.transform.position, customerSpawnPoint.transform.rotation);
-        Events.onCustomerCome.Trigger();
-        status = CurrentCustomerStatus.Waiting;
+    void OnChangeSubmit()
+    {
+        GetNextCustomer();
+    }
+
+    void GetNextCustomer()
+    {
+        status = CurrentCashierStatus.Vacant;
+
+        Destroy(currentCustomer);
+
+        customerQueue.Dequeue();
+
+        if (customerQueue.Peek() != null)
+        {
+            currentCustomer = customerQueue.Peek();
+            Events.onGetNextCustomer.Trigger();
+        }
+        else
+        {
+            Debug.Log("Day ended!");
+            // Events.onLastCustomerDone.Trigger();
+        }
+    }
+
+    public GameObject GetCurrentCustomer()
+    {
+        return currentCustomer;
     }
 }
