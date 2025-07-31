@@ -49,12 +49,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 794ec4abd3e0cd8429d31096f3f10ac9, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: e19312403b1c378079d609cbb5a5d090, type: 2}
+      objectReference: {fileID: 2100000, guid: f7622f2b903ae5b45a1ee5b22decc28d, type: 2}
     - target: {fileID: 919132149155446097, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_Name
-      value: Buku
+      value: Buku_WCC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
