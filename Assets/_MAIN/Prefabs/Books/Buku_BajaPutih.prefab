@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4943852206235421278
+--- !u!1001 &4185332718352213142
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6374604
+      value: -5.294038
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.590482
+      value: -4.5821924
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5dd265dc0eb15d8489b0fa1216ad8420, type: 2}
+      objectReference: {fileID: 2100000, guid: 2d52115f9ff014c2eae0acd426f6ae73, type: 2}
     - target: {fileID: 919132149155446097, guid: 81d6b46862e68a04c9fa12b0a1d78da5, type: 3}
       propertyPath: m_Name
-      value: Buku (1)
+      value: Buku
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
