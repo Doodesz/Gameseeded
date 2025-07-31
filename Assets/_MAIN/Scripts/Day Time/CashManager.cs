@@ -39,6 +39,15 @@ public class CashManager : MonoBehaviour
         UpdateCashRegisterOnCounterDisplay();
     }
 
+    private void OnEnable()
+    {
+        Events.onChangeSubmit.Add(RemoveAllStack);
+    }
+    private void OnDisable()
+    {
+        Events.onChangeSubmit.Remove(RemoveAllStack);
+    }
+
     public void SubmitCash()
     {
         if(currentChangeAmount == currentChangeNeeded)
@@ -54,9 +63,10 @@ public class CashManager : MonoBehaviour
 
         Events.onCustomerLeave.Trigger();
         Events.onGetNextCustomer.Trigger();
+        Events.onChangeSubmit.Trigger();
 
-        UpdateCashRegisterChangeDisplay("Waiting...");
-        UpdateCashRegisterOnCounterDisplay("Waiting...");
+        UpdateCashRegisterChangeDisplay("Menunggu...");
+        UpdateCashRegisterOnCounterDisplay("Menunggu...");
     }
 
     public void AddCash(int amount)
@@ -159,5 +169,21 @@ public class CashManager : MonoBehaviour
         GameObject cash = cash100Stacks.Peek();
         cash100Stacks.Pop();
         Destroy(cash);
+    }
+
+    void RemoveAllStack()
+    {
+        // Destroy all the GameObjects in stacks content
+        foreach(GameObject cash in cash1Stacks)
+            Destroy(cash);
+        foreach(GameObject cash in cash10Stacks)
+            Destroy(cash);
+        foreach (GameObject cash in cash100Stacks)
+            Destroy(cash);
+
+        // Clear all stacks
+        cash1Stacks.Clear();
+        cash10Stacks.Clear();
+        cash100Stacks.Clear();
     }
 }

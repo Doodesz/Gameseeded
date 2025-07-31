@@ -85,7 +85,8 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    runManager.AddCash(cash.cashAmount);
+                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCustomerStatus.Waiting)
+                        runManager.AddCash(cash.cashAmount);
                     break;
 
                 case InteractType.RemoveCash:
@@ -94,7 +95,8 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    runManager.RemoveCash(cash.cashAmount);
+                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCustomerStatus.Waiting)
+                        runManager.RemoveCash(cash.cashAmount);
                     break;
 
                 case InteractType.SubmitChangeButton:
