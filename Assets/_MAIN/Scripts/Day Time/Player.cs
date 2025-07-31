@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [Tooltip("Debugging")]
     public GameObject selectedObj;
     CashManager runManager;
+    CustomerQueueManager customerQueueManager;
 
     public static Player Instance;
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         runManager = CashManager.Instance;
+        customerQueueManager = CustomerQueueManager.Instance;
 
         if (Instance != null) Destroy(this);
         Instance = this;
@@ -85,7 +87,7 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCashierStatus.Occcupied)
+                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied)
                         runManager.AddCash(cash.cashAmount);
                     break;
 
@@ -95,15 +97,18 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCashierStatus.Occcupied)
+                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied)
                         runManager.RemoveCash(cash.cashAmount);
                     break;
 
                 case InteractType.SubmitChangeButton:
-                    if (CustomerQueueManager.Instance.status == CustomerQueueManager.CurrentCashierStatus.Occcupied)
+                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied
+                        && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.BuyNTalk)
                         CashManager.Instance.SubmitCash();
+                    else if (customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.TalkOnly)
+                        Debug.Log("Customer is talk only!");
                     else Debug.Log("No customer present");
-                        break;
+                    break;
 
                 case InteractType.TalkToCustomer:
                     ConversationManager.Instance.StartConversation(customer.conversation);

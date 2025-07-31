@@ -185,6 +185,9 @@ Transform:
   - {fileID: 443629855}
   - {fileID: 429975443}
   - {fileID: 1965035403}
+  - {fileID: 1089149568}
+  - {fileID: 2035948077}
+  - {fileID: 1730040834}
   - {fileID: 1064388909}
   - {fileID: 1875209794}
   m_Father: {fileID: 0}
@@ -1240,12 +1243,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd38fa2f8c2d3541a6627d2f45c39d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 0
+  cashierStatus: 0
   customerQueueList:
   - {fileID: 7542136291464563636, guid: 0a9949f6a562b7049879ccbaf20b158a, type: 3}
   - {fileID: 7542136291464563636, guid: 0a9949f6a562b7049879ccbaf20b158a, type: 3}
   - {fileID: 7542136291464563636, guid: 0a9949f6a562b7049879ccbaf20b158a, type: 3}
   customerSpawnPoint: {fileID: 1064388908}
+  book1OnTablePositionPoint: {fileID: 1089149567}
+  book2OnTablePositionPoint: {fileID: 2035948076}
+  book3OnTablePositionPoint: {fileID: 1730040833}
   currentCustomer: {fileID: 0}
 --- !u!114 &322758485
 MonoBehaviour:
@@ -2415,6 +2421,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 72727234}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1089149567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089149568}
+  m_Layer: 0
+  m_Name: Book 1 position point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089149568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089149567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.58, y: 1.457, z: -7.627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72727234}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!1 &1117679706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2684,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0dd3be70c66049146a61de6df68425ad, type: 3}
   m_PrefabInstance: {fileID: 270360359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1730040833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730040834}
+  m_Layer: 0
+  m_Name: Book 3 position point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730040834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730040833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.58, y: 1.657, z: -7.627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72727234}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!224 &1810012033 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
@@ -2998,6 +3066,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 72727234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2035948076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035948077}
+  m_Layer: 0
+  m_Name: Book 2 position point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2035948077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035948076}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.58, y: 1.557, z: -7.627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 72727234}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!4 &196695212811007827
 Transform:
   m_ObjectHideFlags: 0
@@ -3028,7 +3127,14 @@ MonoBehaviour:
   conversation: {fileID: 2850832292787115974}
   animator: {fileID: 8402021188737008503}
   avatarAnimator: {fileID: 3810322750772817317}
+  booksContainer: {fileID: 0}
   interactCollider: {fileID: 3320703820713667187}
+  book1Prefab: {fileID: 0}
+  book2Prefab: {fileID: 0}
+  book3Prefab: {fileID: 0}
+  book1PositionPoint: {fileID: 0}
+  book2PositionPoint: {fileID: 0}
+  book3PositionPoint: {fileID: 0}
   change: 500
   customerType: 0
   isCheckingOut: 0

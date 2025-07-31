@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2616388306860755045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5101547538820221623}
+  m_Layer: 0
+  m_Name: Book 1 pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5101547538820221623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616388306860755045}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
+  m_LocalPosition: {x: -0, y: 1.487, z: 0.491}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6219540879641698001}
+  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
 --- !u!1 &3363398122379993761
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,6 +82,102 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
+--- !u!1 &4002711503509422664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5963752787166019187}
+  m_Layer: 0
+  m_Name: Book 2 pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5963752787166019187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002711503509422664}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
+  m_LocalPosition: {x: 1.5372236e-11, y: 1.5859151, z: 0.5056545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6219540879641698001}
+  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
+--- !u!1 &5942615267870076585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6219540879641698001}
+  m_Layer: 0
+  m_Name: Books container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6219540879641698001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942615267870076585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.66, y: 0.66, z: 0.66}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5101547538820221623}
+  - {fileID: 5963752787166019187}
+  - {fileID: 5031781226959355198}
+  m_Father: {fileID: 3369070403160587598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7213712969968899896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5031781226959355198}
+  m_Layer: 0
+  m_Name: Book 3 pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5031781226959355198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213712969968899896}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
+  m_LocalPosition: {x: 1.3172938e-11, y: 1.6848426, z: 0.5203111}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6219540879641698001}
+  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
 --- !u!1 &7542136291464563636
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +264,14 @@ MonoBehaviour:
   conversation: {fileID: 3444532098478645966}
   animator: {fileID: 8990494019766220415}
   avatarAnimator: {fileID: 7914854928033408314}
+  booksContainer: {fileID: 5942615267870076585}
   interactCollider: {fileID: 2758698776563703675}
+  book1Prefab: {fileID: 7646138829628991614, guid: 7047c93d52b411947bd53a641e380212, type: 3}
+  book2Prefab: {fileID: 3393871733627880762, guid: d2f45b8d2cd9f9346be0c8d217fb81b2, type: 3}
+  book3Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
+  book1PositionPoint: {fileID: 2616388306860755045}
+  book2PositionPoint: {fileID: 4002711503509422664}
+  book3PositionPoint: {fileID: 7213712969968899896}
   change: 500
   customerType: 0
   isCheckingOut: 0
@@ -290,9 +424,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -7891163509859949083, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6219540879641698001}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+--- !u!4 &3369070403160587598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7891163509859949083, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+  m_PrefabInstance: {fileID: 4376833868048554155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4266908084994293568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}

@@ -6,13 +6,22 @@ using System.Collections;
 public class CustomerQueueManager : MonoBehaviour
 {
     public enum CurrentCashierStatus { Vacant, Occcupied };
-    public CurrentCashierStatus status;
+    public CurrentCashierStatus cashierStatus;
 
     public static CustomerQueueManager Instance;
 
     [Header("Parameters")]
     public List<GameObject> customerQueueList = new List<GameObject>();
-    [SerializeField] private GameObject customerSpawnPoint;
+    [Space(10f)]
+    [SerializeField] GameObject customerSpawnPoint;
+    [Space(10f)]
+    [SerializeField] GameObject book1OnTablePositionPoint;
+    [SerializeField] GameObject book2OnTablePositionPoint;
+    [SerializeField] GameObject book3OnTablePositionPoint;
+    [Space(10f)]
+    [SerializeField] GameObject book1OnTable;
+    [SerializeField] GameObject book2OnTable;
+    [SerializeField] GameObject book3OnTable;
 
     [Header("Debugging")]
     [SerializeField] GameObject currentCustomer;
@@ -23,11 +32,15 @@ public class CustomerQueueManager : MonoBehaviour
     {
         Events.onCustomerCome.Add(OnCustomerCome);
         Events.onChangeSubmit.Add(OnChangeSubmit);
+
+        ConversationManager.OnConversationEnded += OnConversationEnded;
     }
     private void OnDisable()
     {
         Events.onCustomerCome.Remove(OnCustomerCome);
         Events.onChangeSubmit.Remove(OnChangeSubmit);
+
+        ConversationManager.OnConversationEnded -= OnConversationEnded;
     }
 
     private void Start()
@@ -62,19 +75,35 @@ public class CustomerQueueManager : MonoBehaviour
 
     void OnCustomerCome()
     {
-        status = CurrentCashierStatus.Occcupied;
+        cashierStatus = CurrentCashierStatus.Occcupied;
+
+        book1OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book1Prefab, book1OnTablePositionPoint.transform);
+        book2OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book2Prefab, book2OnTablePositionPoint.transform);
+        book3OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book3Prefab, book3OnTablePositionPoint.transform);
     }
 
     void OnChangeSubmit()
     {
+        currentCustomer.GetComponent<Customer>().EnableInteraction(false);
         GetNextCustomer();
+        ClearTable();
+    }
+
+    void OnConversationEnded()
+    {
+        if (currentCustomer.GetComponent<Customer>().customerType == CustomerType.TalkOnly)
+        {
+            currentCustomer.GetComponent<Customer>().EnableInteraction(false);
+            GetNextCustomer();
+            ClearTable();
+        }
     }
 
     void GetNextCustomer()
     {
-        status = CurrentCashierStatus.Vacant;
+        cashierStatus = CurrentCashierStatus.Vacant;
 
-        Destroy(currentCustomer);
+        currentCustomer.GetComponent<Animator>().SetBool("isLeaving", true);
 
         customerQueue.Dequeue();
 
@@ -93,5 +122,12 @@ public class CustomerQueueManager : MonoBehaviour
     public GameObject GetCurrentCustomer()
     {
         return currentCustomer;
+    }
+
+    void ClearTable()
+    {
+        Destroy(book1OnTable);
+        Destroy(book2OnTable);
+        Destroy(book3OnTable);
     }
 }
