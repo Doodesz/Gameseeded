@@ -3276,11 +3276,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7891163509859949083, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
   m_PrefabInstance: {fileID: 1292394310323812384}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1292394310323812387 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
-  m_PrefabInstance: {fileID: 1292394310323812384}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1936088339211117251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,9 +3384,10 @@ MonoBehaviour:
   book3Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
   conversation: {fileID: 188954647086023237}
   animator: {fileID: 5879031898177050356}
-  avatarAnimator: {fileID: 1292394310323812387}
+  avatarAnimator: {fileID: 0}
   booksContainer: {fileID: 9163219852839456290}
   interactCollider: {fileID: 800232372054966256}
+  outline: {fileID: 0}
   book1PositionPoint: {fileID: 656792978820638958}
   book2PositionPoint: {fileID: 1936088339211117251}
   book3PositionPoint: {fileID: 5282268575584171955}

@@ -114,9 +114,9 @@ public class CustomerQueueManager : MonoBehaviour
 
         customerQueue.Dequeue();
 
-        if (customerQueue.Peek() != null)
+        if (customerQueue.TryPeek(out GameObject nextCustomer))
         {
-            currentCustomer = customerQueue.Peek();
+            currentCustomer = nextCustomer;
             Events.onGetNextCustomer.Trigger();
         }
         else
