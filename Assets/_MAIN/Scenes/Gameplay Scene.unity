@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 231676787}
   - component: {fileID: 231676786}
   m_Layer: 0
-  m_Name: Current cash on counter amount text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1857,6 +1857,7 @@ MonoBehaviour:
   - {fileID: 6595546217566624021, guid: 6d2f604a5bc02284b9dbbfd74273db83, type: 3}
   - {fileID: 7542136291464563636, guid: 0a9949f6a562b7049879ccbaf20b158a, type: 3}
   - {fileID: 7542136291464563636, guid: 0a9949f6a562b7049879ccbaf20b158a, type: 3}
+  submitChangeButton: {fileID: 286616793}
   customerSpawnPoint: {fileID: 1064388908}
   book1OnTablePositionPoint: {fileID: 1089149567}
   book2OnTablePositionPoint: {fileID: 2035948076}

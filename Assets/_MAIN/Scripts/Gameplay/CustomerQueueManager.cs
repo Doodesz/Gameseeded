@@ -12,6 +12,9 @@ public class CustomerQueueManager : MonoBehaviour
 
     [Header("Parameters")]
     public List<GameObject> customerQueueList = new List<GameObject>();
+
+    [Header("References")]
+    [SerializeField] GameObject submitChangeButton;
     [Space(10f)]
     [SerializeField] GameObject customerSpawnPoint;
     [Space(10f)]
@@ -59,6 +62,8 @@ public class CustomerQueueManager : MonoBehaviour
         currentCustomer = customerQueue.Peek();
 
         InvokeRepeating("SpawnCustomer", 5f, 5f);
+
+        submitChangeButton.SetActive(false);
     }
 
     void SpawnCustomer()
@@ -87,6 +92,11 @@ public class CustomerQueueManager : MonoBehaviour
             book2OnTable = Instantiate(currentCustomerComponent.book2Prefab, book2OnTablePositionPoint.transform);
         if (currentCustomerComponent.book3Prefab != null)
             book3OnTable = Instantiate(currentCustomerComponent.book3Prefab, book3OnTablePositionPoint.transform);
+
+        if (currentCustomerComponent.customerType == CustomerType.TalkOnly)
+            submitChangeButton.SetActive(false);
+        else 
+            submitChangeButton.SetActive(true);
     }
 
     void OnChangeSubmit()
@@ -128,6 +138,8 @@ public class CustomerQueueManager : MonoBehaviour
 
             StartCoroutine(EndDay());
         }
+
+        submitChangeButton.SetActive(false);
     }
 
     public GameObject GetCurrentCustomer()
