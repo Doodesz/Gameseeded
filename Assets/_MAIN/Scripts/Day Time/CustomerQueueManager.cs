@@ -136,5 +136,9 @@ public class CustomerQueueManager : MonoBehaviour
         Destroy(book1OnTable);
         Destroy(book2OnTable);
         Destroy(book3OnTable);
+
+        book1OnTable = null;
+        book2OnTable = null;
+        book3OnTable = null;
     }
 }
