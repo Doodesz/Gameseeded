@@ -30,12 +30,14 @@ public class CashManager : MonoBehaviour
 
     public static CashManager Instance;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         if (Instance != null) Destroy(this);
-        Instance = this;
+        Instance = this;        
+    }
 
+    void Start()
+    {
         UpdateCashRegisterChangeDisplay("Menunggu...");
         UpdateCashRegisterOnCounterDisplay("Menunggu...");
 
@@ -44,15 +46,20 @@ public class CashManager : MonoBehaviour
 
     public void SubmitCash()
     {
-        if(currentChangeAmount == currentChangeNeeded)
+        if(currentChangeAmount > currentChangeNeeded)      // More change given
         {
-            // tambah populer
-            Debug.Log("Perfect!");
+            BookstoreStats.Instance.AdjustMoney(-1);
+            BookstoreStats.Instance.AdjustTrust(0);
         }
-        else
+        else if (currentChangeAmount < currentChangeNeeded) // Less change given
         {
-            // berkurang populer
-            Debug.Log("Missed!");
+            BookstoreStats.Instance.AdjustMoney(2);
+            BookstoreStats.Instance.AdjustTrust(-1);
+        }
+        else                                                // Correct
+        {
+            BookstoreStats.Instance.AdjustMoney(1);
+            BookstoreStats.Instance.AdjustTrust(1);
         }
 
         Events.onChangeSubmit.Trigger();

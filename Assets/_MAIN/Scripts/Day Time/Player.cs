@@ -14,17 +14,18 @@ public class Player : MonoBehaviour
 
     public static Player Instance;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        if (Instance != null) Destroy(this);
+        Instance = this;        
+    }
+
     void Start()
     {
         runManager = CashManager.Instance;
         customerQueueManager = CustomerQueueManager.Instance;
-
-        if (Instance != null) Destroy(this);
-        Instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing)
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
 
                 case InteractType.SubmitChangeButton:
                     if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied
-                        && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.BuyNTalk)
+                        && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.BuyOnly)
                         CashManager.Instance.SubmitCash();
                     else if (customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.TalkOnly)
                         Debug.Log("Customer is talk only!");

@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2616388306860755045}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
-  m_LocalPosition: {x: -0, y: 1.487, z: 0.491}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.007, z: -0.008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6219540879641698001}
-  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &3363398122379993761
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,13 +106,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4002711503509422664}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
-  m_LocalPosition: {x: 1.5372236e-11, y: 1.5859151, z: 0.5056545}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.092, z: 0.007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6219540879641698001}
-  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &5942615267870076585
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +137,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5942615267870076585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.06579403, y: 3.4694465e-18, z: -2.1684041e-19, w: 0.9978332}
+  m_LocalPosition: {x: -0, y: 1.057, z: 0.233}
   m_LocalScale: {x: 0.66, y: 0.66, z: 0.66}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -146,7 +146,7 @@ Transform:
   - {fileID: 5963752787166019187}
   - {fileID: 5031781226959355198}
   m_Father: {fileID: 3369070403160587598}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.545, y: 0, z: 0}
 --- !u!1 &7213712969968899896
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,13 +171,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7213712969968899896}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6532399, y: -0, z: -3.2526065e-18, w: 0.75715107}
-  m_LocalPosition: {x: 1.3172938e-11, y: 1.6848426, z: 0.5203111}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.191, z: 0.021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6219540879641698001}
-  m_LocalEulerAnglesHint: {x: -81.573, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &7542136291464563636
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,9 +190,9 @@ GameObject:
   - component: {fileID: 8505386587425431319}
   - component: {fileID: 6878753505382470024}
   - component: {fileID: 1035056900158161407}
+  - component: {fileID: 8990494019766220415}
   - component: {fileID: 2758698776563703675}
   - component: {fileID: 3444532098478645966}
-  - component: {fileID: 8990494019766220415}
   m_Layer: 0
   m_Name: Customer 1
   m_TagString: Interactable
@@ -261,20 +261,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d2bb7bddd07054e8fc3bce4c9c5599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  change: 500
+  customerType: 0
+  book1Prefab: {fileID: 7646138829628991614, guid: 7047c93d52b411947bd53a641e380212, type: 3}
+  book2Prefab: {fileID: 3393871733627880762, guid: d2f45b8d2cd9f9346be0c8d217fb81b2, type: 3}
+  book3Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
   conversation: {fileID: 3444532098478645966}
   animator: {fileID: 8990494019766220415}
   avatarAnimator: {fileID: 7914854928033408314}
   booksContainer: {fileID: 5942615267870076585}
   interactCollider: {fileID: 2758698776563703675}
-  book1Prefab: {fileID: 7646138829628991614, guid: 7047c93d52b411947bd53a641e380212, type: 3}
-  book2Prefab: {fileID: 3393871733627880762, guid: d2f45b8d2cd9f9346be0c8d217fb81b2, type: 3}
-  book3Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
+  outline: {fileID: 8505386587425431319}
   book1PositionPoint: {fileID: 2616388306860755045}
   book2PositionPoint: {fileID: 4002711503509422664}
   book3PositionPoint: {fileID: 7213712969968899896}
-  change: 500
-  customerType: 0
   isCheckingOut: 0
+--- !u!95 &8990494019766220415
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542136291464563636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+  m_Controller: {fileID: 9100000, guid: a78ccbb92a1c19e4997af86709f88315, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &2758698776563703675
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -324,28 +347,6 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &8990494019766220415
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7542136291464563636}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
-  m_Controller: {fileID: 9100000, guid: a78ccbb92a1c19e4997af86709f88315, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4376833868048554155
 PrefabInstance:
   m_ObjectHideFlags: 0

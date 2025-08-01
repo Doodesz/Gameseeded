@@ -43,11 +43,14 @@ public class CustomerQueueManager : MonoBehaviour
         ConversationManager.OnConversationEnded -= OnConversationEnded;
     }
 
-    private void Start()
+    private void Awake()
     {
         if (Instance != null) Destroy(this);
-        Instance = this;
+        Instance = this;        
+    }
 
+    private void Start()
+    {
         customerWaitingToSpawn = new Queue<GameObject>(customerQueueList);
         customerQueue = new Queue<GameObject>();
 
@@ -76,10 +79,14 @@ public class CustomerQueueManager : MonoBehaviour
     void OnCustomerCome()
     {
         cashierStatus = CurrentCashierStatus.Occcupied;
+        Customer currentCustomerComponent = currentCustomer.GetComponent<Customer>();
 
-        book1OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book1Prefab, book1OnTablePositionPoint.transform);
-        book2OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book2Prefab, book2OnTablePositionPoint.transform);
-        book3OnTable = Instantiate(currentCustomer.GetComponent<Customer>().book3Prefab, book3OnTablePositionPoint.transform);
+        if (currentCustomerComponent.book1Prefab != null)
+            book1OnTable = Instantiate(currentCustomerComponent.book1Prefab, book1OnTablePositionPoint.transform);
+        if (currentCustomerComponent.book2Prefab != null)
+            book2OnTable = Instantiate(currentCustomerComponent.book2Prefab, book2OnTablePositionPoint.transform);
+        if (currentCustomerComponent.book3Prefab != null)
+            book3OnTable = Instantiate(currentCustomerComponent.book3Prefab, book3OnTablePositionPoint.transform);
     }
 
     void OnChangeSubmit()

@@ -2,29 +2,30 @@ using DialogueEditor;
 using UnityEngine;
 using System.Collections.Generic;
 
-public enum CustomerType { BuyNTalk, TalkOnly };
+public enum CustomerType { BuyOnly, TalkOnly, TalkNBuy };
 [RequireComponent(typeof(Interactable))]
 public class Customer : MonoBehaviour
 {
+    [Header("Parameters")]
+    // public List<GameObject> books;
+    public int change;
+    public CustomerType customerType;
+    [Space(10f)]
+    public GameObject book1Prefab;
+    public GameObject book2Prefab;
+    public GameObject book3Prefab;
+
     [Header("References")]
     public NPCConversation conversation;
     public Animator animator;
     public Animator avatarAnimator;
     [SerializeField] GameObject booksContainer;
     [SerializeField] Collider interactCollider;
-    [Space(20f)]
-    public GameObject book1Prefab;
-    public GameObject book2Prefab;
-    public GameObject book3Prefab;
+    [SerializeField] Outline outline;
     [Space(10f)]
     [SerializeField] GameObject book1PositionPoint;
     [SerializeField] GameObject book2PositionPoint;
     [SerializeField] GameObject book3PositionPoint;
-
-    [Header("Parameters")]
-    // public List<GameObject> books;
-    public int change;
-    public CustomerType customerType;
 
     [Header("Debugging")]
     [SerializeField] private bool isCheckingOut;
@@ -34,17 +35,16 @@ public class Customer : MonoBehaviour
         Events.onCustomerCome.Add(OnCustomerCome);
         Events.onGetNextCustomer.Add(OnGetNextCustomer);
 
-        ConversationManager.OnConversationEnded += OnConversationEnded;
+        //ConversationManager.OnConversationEnded += OnConversationEnded;
     }
     private void OnDisable()
     {
         Events.onCustomerCome.Remove(OnCustomerCome);
         Events.onGetNextCustomer.Remove(OnGetNextCustomer);
 
-        ConversationManager.OnConversationEnded -= OnConversationEnded;
+        //ConversationManager.OnConversationEnded -= OnConversationEnded;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (!TryGetComponent<Interactable>(out Interactable interactable))
@@ -55,9 +55,12 @@ public class Customer : MonoBehaviour
         if (CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
             animator.SetBool("isCheckingOut", true);
 
-        Instantiate(book1Prefab, book1PositionPoint.transform);
-        Instantiate(book2Prefab, book2PositionPoint.transform);
-        Instantiate(book3Prefab, book3PositionPoint.transform);
+        if(book1Prefab != null)
+            Instantiate(book1Prefab, book1PositionPoint.transform);
+        if (book2Prefab != null)
+            Instantiate(book2Prefab, book2PositionPoint.transform);
+        if (book3Prefab != null)
+            Instantiate(book3Prefab, book3PositionPoint.transform);
 
         EnableInteraction(false);
 
@@ -91,14 +94,14 @@ public class Customer : MonoBehaviour
         {
             EnableInteraction(true);
             
-            if (customerType == CustomerType.BuyNTalk)
+            if (customerType == CustomerType.BuyOnly)
             {
                 CashManager.Instance.UpdateCashRegisterChangeDisplay(change.ToString());
                 CashManager.Instance.currentChangeNeeded = change;
             }
             else
             {
-
+                // hint player using outline to interact
             }
         }
     }
@@ -111,13 +114,25 @@ public class Customer : MonoBehaviour
         }
     }
 
-    void OnConversationEnded()
-    {
-
-    }
-
     public void EnableInteraction(bool toggle)
     {
         interactCollider.enabled = toggle;
+
+        if (!toggle) outline.enabled = false; // Fix bug
+            
+    }
+
+    // These 3 gets called in dialogue
+    public void AdjustTrust(int amount)
+    {
+        BookstoreStats.Instance.AdjustTrust(amount);
+    }
+    public void AdjustMoney(int amount)
+    {
+        BookstoreStats.Instance.AdjustMoney(amount);
+    }
+    public void AdjustStock(int amount)
+    {
+        BookstoreStats.Instance.AdjustStock(amount);
     }
 }

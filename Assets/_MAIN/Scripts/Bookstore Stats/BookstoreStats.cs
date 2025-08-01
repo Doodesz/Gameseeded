@@ -7,21 +7,24 @@ public class BookstoreStats : MonoBehaviour
     [SerializeField][Range(0f, 10f)] int money;
     [SerializeField][Range(0f, 20f)] int stock;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static BookstoreStats Instance;
+
+    private void Awake()
     {
-        
+        if (Instance != null) Destroy(this);
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AdjustTrust(int amount)
     {
-        
+        trust += amount;
     }
-
-    public void IncreaseTrust(int amount)
+    public void AdjustMoney(int amount)
     {
-
+        money += amount;
     }
-
+    public void AdjustStock(int amount)
+    {
+        stock += amount;
+    }
 }
