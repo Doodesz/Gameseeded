@@ -125,14 +125,14 @@ public class Customer : MonoBehaviour
     // These 3 gets called in dialogue
     public void AdjustTrust(int amount)
     {
-        BookstoreStats.Instance.AdjustTrust(amount);
+        BookstoreStatsBar.Instance.AdjustTrust(amount);
     }
     public void AdjustMoney(int amount)
     {
-        BookstoreStats.Instance.AdjustMoney(amount);
+        BookstoreStatsBar.Instance.AdjustMoney(amount);
     }
     public void AdjustStock(int amount)
     {
-        BookstoreStats.Instance.AdjustStock(amount);
+        BookstoreStatsBar.Instance.AdjustStock(amount);
     }
 }

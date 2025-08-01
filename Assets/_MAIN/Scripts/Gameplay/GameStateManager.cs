@@ -3,17 +3,21 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    public enum GameState { Playing, OnConversation, Paused };
+    public enum GameState { Playing, OnConversation, Paused, DayEnded };
     public GameState gameState;
     public static GameStateManager Instance;
 
     private void OnEnable()
     {
+        Events.onDayEnded.Add(OnDayEnded);
+
         ConversationManager.OnConversationStarted += ConversationStartBehavior;
         ConversationManager.OnConversationEnded += ConversationEndBehavior;
     }
     private void OnDisable()
     {
+        Events.onDayEnded.Remove(OnDayEnded);
+
         ConversationManager.OnConversationStarted -= ConversationStartBehavior;
         ConversationManager.OnConversationEnded -= ConversationEndBehavior;
     }
@@ -28,17 +32,17 @@ public class GameStateManager : MonoBehaviour
     {
         gameState = GameState.OnConversation;
 
-        ToggleCursor(true);
+        ActivateCursor(true);
     }
 
     void ConversationEndBehavior()
     {
         gameState = GameState.Playing;
 
-        ToggleCursor(false);
+        ActivateCursor(false);
     }
 
-    void ToggleCursor(bool toggle)
+    void ActivateCursor(bool toggle)
     {
         FirstPersonController.Instance.cameraCanMove = !toggle;
         FirstPersonController.Instance.enableZoom = !toggle;
@@ -48,5 +52,10 @@ public class GameStateManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         else
             Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void OnDayEnded()
+    {
+        ActivateCursor(true);
     }
 }

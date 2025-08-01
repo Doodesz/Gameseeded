@@ -48,18 +48,21 @@ public class CashManager : MonoBehaviour
     {
         if(currentChangeAmount > currentChangeNeeded)      // More change given
         {
-            BookstoreStats.Instance.AdjustMoney(-1);
-            BookstoreStats.Instance.AdjustTrust(0);
+            BookstoreStatsBar.Instance.AdjustMoney(-1);
+            BookstoreStatsBar.Instance.AdjustTrust(0);
+            DayEndedBehaviour.Instance.AddCustomersWrongChange();
         }
         else if (currentChangeAmount < currentChangeNeeded) // Less change given
         {
-            BookstoreStats.Instance.AdjustMoney(2);
-            BookstoreStats.Instance.AdjustTrust(-1);
+            BookstoreStatsBar.Instance.AdjustMoney(2);
+            BookstoreStatsBar.Instance.AdjustTrust(-1);
+            DayEndedBehaviour.Instance.AddCustomersWrongChange();
         }
         else                                                // Correct
         {
-            BookstoreStats.Instance.AdjustMoney(1);
-            BookstoreStats.Instance.AdjustTrust(1);
+            BookstoreStatsBar.Instance.AdjustMoney(1);
+            BookstoreStatsBar.Instance.AdjustTrust(1);
+            DayEndedBehaviour.Instance.AddCustomersCorrectChange();
         }
 
         Events.onChangeSubmit.Trigger();

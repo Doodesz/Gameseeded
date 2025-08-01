@@ -94,6 +94,7 @@ public class CustomerQueueManager : MonoBehaviour
         currentCustomer.GetComponent<Customer>().EnableInteraction(false);
         GetNextCustomer();
         ClearTable();
+        DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
     }
 
     void OnConversationEnded()
@@ -103,6 +104,8 @@ public class CustomerQueueManager : MonoBehaviour
             currentCustomer.GetComponent<Customer>().EnableInteraction(false);
             GetNextCustomer();
             ClearTable();
+            DayEndedBehaviour.Instance.AddCustomersServed();
+            DayEndedBehaviour.Instance.AddCustomersTalked();
         }
     }
 
@@ -122,7 +125,8 @@ public class CustomerQueueManager : MonoBehaviour
         else
         {
             Debug.Log("Day ended!");
-            // Events.onLastCustomerDone.Trigger();
+
+            StartCoroutine(EndDay());
         }
     }
 
@@ -140,5 +144,11 @@ public class CustomerQueueManager : MonoBehaviour
         book1OnTable = null;
         book2OnTable = null;
         book3OnTable = null;
+    }
+
+    IEnumerator EndDay()
+    {
+        yield return new WaitForSeconds(3f);
+        Events.onDayEnded.Trigger();
     }
 }

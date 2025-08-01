@@ -48,4 +48,5 @@ public partial class Events
     public static readonly GameEvent onCustomerCome = new();
     public static readonly GameEvent onSelectNewInteractable = new();
     public static readonly GameEvent onDialogueStart = new();
+    public static readonly GameEvent onDayEnded = new();
 }

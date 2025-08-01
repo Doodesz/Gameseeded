@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BookstoreStats : MonoBehaviour
+public class BookstoreStatsBar : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] Slider trustBarSlider;
@@ -13,7 +13,7 @@ public class BookstoreStats : MonoBehaviour
     [SerializeField][Range(0f, 10f)] int money;
     [SerializeField][Range(0f, 20f)] int stock;
 
-    public static BookstoreStats Instance;
+    public static BookstoreStatsBar Instance;
 
     private void Awake()
     {
