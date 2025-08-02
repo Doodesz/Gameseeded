@@ -2,11 +2,13 @@ using DialogueEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CustomerQueueManager : MonoBehaviour
 {
     public enum CurrentCashierStatus { Vacant, Occcupied };
     public CurrentCashierStatus cashierStatus;
+    enum LoadDayDataMethod { DefaultLoadFromSave, UseCustomDayIndex, UseCustomerQueueListDirectly }
 
     public static CustomerQueueManager Instance;
 
@@ -27,7 +29,12 @@ public class CustomerQueueManager : MonoBehaviour
     [SerializeField] GameObject book3OnTable;
 
     [Header("Debugging")]
-    [SerializeField] bool loadFromDaysManager;
+    [Tooltip("Other method than DefaultLoadFromSave is only for debugging purposes.")]
+    [SerializeField] LoadDayDataMethod loadDayDataMethod;
+    [Tooltip("When using UseCustomDayIndex load method, use this variable to determine which dayIndex to load.")]
+    [SerializeField] int dayDataCustomIndex;
+    [Space(10f)]
+    [SerializeField] Day dayData;
     [Space(20f)]
     [SerializeField] GameObject currentCustomer;
     Customer currentCustomerComponent;
@@ -40,6 +47,8 @@ public class CustomerQueueManager : MonoBehaviour
         Events.onChangeSubmit.Add(OnChangeSubmit);
 
         ConversationManager.OnConversationEnded += OnConversationEnded;
+
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnDisable()
     {
@@ -47,6 +56,8 @@ public class CustomerQueueManager : MonoBehaviour
         Events.onChangeSubmit.Remove(OnChangeSubmit);
 
         ConversationManager.OnConversationEnded -= OnConversationEnded;
+
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Awake()
@@ -57,13 +68,19 @@ public class CustomerQueueManager : MonoBehaviour
 
     private void Start()
     {
-        if (loadFromDaysManager)
+        if (loadDayDataMethod == LoadDayDataMethod.DefaultLoadFromSave)
         {
-            // dont clear customer queue list
+            customerQueueList.Clear();
+            LoadCustomerData();
         }
-        else
+        else if (loadDayDataMethod == LoadDayDataMethod.UseCustomDayIndex)
         {
-            // clear customer queue list
+            customerQueueList.Clear();
+            LoadCustomerData(dayDataCustomIndex);
+        }
+        else if (loadDayDataMethod == LoadDayDataMethod.UseCustomerQueueListDirectly)
+        {
+            // continue
         }
 
         customerWaitingToSpawn = new Queue<GameObject>(customerQueueList);
@@ -78,6 +95,8 @@ public class CustomerQueueManager : MonoBehaviour
 
         submitChangeButton.SetActive(false);
     }
+
+
 
     void SpawnCustomer()
     {
@@ -199,5 +218,20 @@ public class CustomerQueueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Events.onDayEnded.Trigger();
+    }
+
+    void LoadCustomerData()
+    {
+        Debug.LogWarning("WARNING: LoadCustomerData() called! Function is not yet implemented!");
+        // load saved data first
+        // dayData = DayManager.Instance.GetDayData(0);
+
+        customerQueueList = dayData.customersInDay;
+    }
+    void LoadCustomerData(int dayIndex)
+    {
+        dayData = DayManager.Instance.GetDayData(dayIndex);
+
+        customerQueueList = DayManager.Instance.GetDayData(dayIndex).customersInDay;
     }
 }

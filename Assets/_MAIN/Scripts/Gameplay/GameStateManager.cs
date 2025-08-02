@@ -56,6 +56,8 @@ public class GameStateManager : MonoBehaviour
 
     void OnDayEnded()
     {
+        gameState = GameState.DayEnded;
+
         ActivateCursor(true);
     }
 }

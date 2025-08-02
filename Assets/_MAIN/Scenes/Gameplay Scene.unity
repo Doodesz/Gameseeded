@@ -1866,6 +1866,9 @@ MonoBehaviour:
   book1OnTable: {fileID: 0}
   book2OnTable: {fileID: 0}
   book3OnTable: {fileID: 0}
+  loadDayDataMethod: 1
+  dayDataCustomIndex: 0
+  dayData: {fileID: 0}
   currentCustomer: {fileID: 0}
 --- !u!114 &322758485
 MonoBehaviour:

@@ -10,17 +10,25 @@ public class DayManager : MonoBehaviour
     [Header("Debugging")]
     [SerializeField] Day dayToLoad;
 
-    private void OnEnable()
+    public static DayManager Instance;
+
+    //private void OnEnable()
+    //{
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
+    //}
+    //private void OnDisable()
+    //{
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
+
+    private void Awake()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (Instance != null) Destroy(this);
+        Instance = this;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) // This means all scripts have run Start() right?
+    public Day GetDayData(int dayIndex)
     {
-
+        return days[dayIndex];
     }
 }

@@ -10,12 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6473b11efb48e6469209d3638b5bde9, type: 3}
-  m_Name: Day 3
+  m_Name: Day 2
   m_EditorClassIdentifier: 
   customersInDay:
-    customerList:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+  - {fileID: 8163831777289468220, guid: 570e9709b6f30714aa6fdbcabd1f138c, type: 3}
