@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d3a4eb2771bc45309daa7935994f369
+guid: 470553dca103d31f3b834a02244350ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,9 +48,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 45, y: 45, z: 45, w: 45}
-  spriteGenerateFallbackPhysicsShape: 1
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DialogueBox 1_0
+      name: ParameterBox_0
       rect:
         serializedVersion: 2
         x: 23
@@ -144,15 +144,15 @@ TextureImporter:
         width: 210
         height: 210
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 24, y: 24, z: 24, w: 24}
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19663078a2b521c318704f9b4ea7ccb2
-      internalID: -1578320922
+      spriteID: 28743c6f38b65a099878077898d03661
+      internalID: 879167061
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dd2b8a01cd764981190b5e8ab581862d
-    internalID: 1698561323
+    spriteID: 46e8aed3e82bdcd1b8037ba735bce84c
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -171,7 +171,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DialogueBox 1_0: -1578320922
+      ParameterBox_0: 879167061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

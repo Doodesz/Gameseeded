@@ -36,7 +36,7 @@ namespace DialogueEditor
         private float m_hoverT = 0.0f;
         private eHoverState m_hoverState;
         private bool Hovering { get { return (m_hoverState == eHoverState.animatingOn || m_hoverState == eHoverState.animatingOff); } }
-        private Vector3 BigSize { get { return Vector3.one * 1.2f; } }
+        private Vector3 BigSize { get { return Vector3.one * 1.05f; } }
 
 
         //--------------------------------------
@@ -47,6 +47,7 @@ namespace DialogueEditor
         {
             m_rect = GetComponent<RectTransform>();
         }
+
 
         private void Update()
         {
@@ -157,7 +158,7 @@ namespace DialogueEditor
             }
             else
             {
-                TextMesh.font = null;
+                //TextMesh.font = null;
             }
         }
 
@@ -187,15 +188,15 @@ namespace DialogueEditor
 
                 case eButtonType.Speech:
                     {
-                        TextMesh.text = "Ok";
-                        TextMesh.font = continueFont;
+                        TextMesh.text = "(lanjut)";
+                        //TextMesh.font = continueFont;
                     }
                     break;
 
                 case eButtonType.End:
                     {
-                        TextMesh.text = "Ok";
-                        TextMesh.font = endFont;
+                        TextMesh.text = "(lanjut)";
+                        //TextMesh.font = endFont;
                     }
                     break;
             }

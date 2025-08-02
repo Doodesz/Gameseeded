@@ -486,7 +486,7 @@ namespace DialogueEditor
             }
             else
             {
-                DialogueText.font = null;
+                //DialogueText.font = null;
             }
 
             // Set name
@@ -701,6 +701,10 @@ namespace DialogueEditor
 
             }
             SetSelectedOption(0);
+            //foreach (UIConversationButton buttonOption in m_uiOptions)
+            //{
+            //    buttonOption.SetHovering(false);
+            //}
 
             // Set the button sprite and alpha
             for (int i = 0; i < m_uiOptions.Count; i++)
@@ -754,6 +758,7 @@ namespace DialogueEditor
         {
             UIConversationButton button = GameObject.Instantiate(ButtonPrefab, OptionsPanel);
             m_uiOptions.Add(button);
+
             return button;
         }
 

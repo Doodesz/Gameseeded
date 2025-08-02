@@ -119,7 +119,6 @@ public class CustomerQueueManager : MonoBehaviour
             DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
             DayEndedBehaviour.Instance.AddCustomersTalked(); 
         }
-        else Debug.LogError("ERROR: Invalid CustomerType for " + gameObject.name);
     }
 
     void OnConversationEnded()
@@ -142,7 +141,6 @@ public class CustomerQueueManager : MonoBehaviour
             DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
             DayEndedBehaviour.Instance.AddCustomersTalked();
         }
-        else Debug.LogError("ERROR: Invalid CustomerType for " + gameObject.name);
     }
 
     void GetNextCustomer()
