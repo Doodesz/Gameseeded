@@ -4220,7 +4220,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: f738169f456a44f46a52d136e0ee52b4, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -8768,9 +8768,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1117679707}
     m_Modifications:
+    - target: {fileID: 558336652418092414, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 558336652418092414, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_RendererIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 558336652418092414, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760524673199037114, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760524673199037114, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 1894485293602195284, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
       propertyPath: field of view
-      value: 50
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894485293602195284, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4748347556836973996, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8832,6 +8856,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8957156664997290174, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
