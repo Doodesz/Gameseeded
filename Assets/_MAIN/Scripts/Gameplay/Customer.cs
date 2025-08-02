@@ -1,6 +1,5 @@
 using DialogueEditor;
 using UnityEngine;
-using System.Collections.Generic;
 
 public enum CustomerType { BuyOnly, TalkOnly, TalkNBuy };
 [RequireComponent(typeof(Interactable))]

@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollText: 1
-  ScrollSpeed: 1
+  ScrollSpeed: 0.5
   BackgroundImage: {fileID: -331614780, guid: 0bca414ecdb4338daaefab54fae3625a, type: 3}
   BackgroundImageSliced: 1
   OptionImage: {fileID: -331614780, guid: 0bca414ecdb4338daaefab54fae3625a, type: 3}

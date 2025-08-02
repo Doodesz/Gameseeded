@@ -27,6 +27,8 @@ public class CustomerQueueManager : MonoBehaviour
     [SerializeField] GameObject book3OnTable;
 
     [Header("Debugging")]
+    [SerializeField] bool loadFromDaysManager;
+    [Space(20f)]
     [SerializeField] GameObject currentCustomer;
     Customer currentCustomerComponent;
     Queue<GameObject> customerQueue;
