@@ -57,6 +57,15 @@ public class CustomerQueueManager : MonoBehaviour
 
     private void Start()
     {
+        if (loadFromDaysManager)
+        {
+            // dont clear customer queue list
+        }
+        else
+        {
+            // clear customer queue list
+        }
+
         customerWaitingToSpawn = new Queue<GameObject>(customerQueueList);
         customerQueue = new Queue<GameObject>();
 

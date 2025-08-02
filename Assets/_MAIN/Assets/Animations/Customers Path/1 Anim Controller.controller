@@ -90,7 +90,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0df64b850a7694a4d8b601ac36f3818d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3107ea462fc015a448136be15cdecf42, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -154,7 +154,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3e805ed01afc52341b3c20a520f0dc62, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0431b4bacc9699d4da0a2f4a9986ce73, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -242,7 +242,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Kelinci Anim Controller
+  m_Name: 1 Anim Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isCheckingOut
@@ -378,7 +378,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 80923f3d626535647aa4825ebaf0ffd7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 394b84a626b058c4686b99ad7e9e76a9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

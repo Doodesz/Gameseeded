@@ -90,7 +90,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3107ea462fc015a448136be15cdecf42, type: 2}
+  m_Motion: {fileID: 7400000, guid: adfc50c7ba3b1da4aae5f27293eb05ae, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -154,7 +154,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0431b4bacc9699d4da0a2f4a9986ce73, type: 2}
+  m_Motion: {fileID: 7400000, guid: be2a6280455dc04468680f9fe0c9bc61, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -242,7 +242,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Beruang Anim Controller
+  m_Name: 2 Anim Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isCheckingOut
@@ -378,7 +378,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 394b84a626b058c4686b99ad7e9e76a9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8e2b0d97954c17c4e8577bc0c5915185, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
