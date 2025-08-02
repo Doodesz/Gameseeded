@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5862269184700047163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.922, y: 0, z: -5.177}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67,6 +67,7 @@ MonoBehaviour:
   book3PositionPoint: {fileID: 9154304668310563242}
   isCheckingOut: 0
   hasBeenTalkedTo: 0
+  hasCheckedOut: 0
 --- !u!95 &3329759464718097860
 Animator:
   serializedVersion: 7

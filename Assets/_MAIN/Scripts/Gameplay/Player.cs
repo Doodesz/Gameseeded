@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
 
                 case InteractType.SubmitChangeButton:
                     if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied
-                        && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.BuyOnly)
+                        && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType != CustomerType.TalkOnly)
                         CashManager.Instance.SubmitCash();
                     else if (customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.TalkOnly)
                         Debug.Log("Customer is talk only!");
