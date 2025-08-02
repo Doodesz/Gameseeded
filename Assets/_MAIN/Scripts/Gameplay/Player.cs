@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
                     break;
 
                 case InteractType.TalkToCustomer:
-                    ConversationManager.Instance.StartConversation(customer.conversation);
+                    customer.StartConversation();
                     selectedObj = null;
                     break;
             }

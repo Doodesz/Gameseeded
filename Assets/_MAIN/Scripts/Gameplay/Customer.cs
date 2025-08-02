@@ -28,7 +28,9 @@ public class Customer : MonoBehaviour
     [SerializeField] GameObject book3PositionPoint;
 
     [Header("Debugging")]
-    [SerializeField] private bool isCheckingOut;
+    [SerializeField] bool isCheckingOut;
+    [SerializeField] bool hasBeenTalkedTo;
+    [SerializeField] bool hasCheckedOut;
 
     private void OnEnable()
     {
@@ -106,6 +108,7 @@ public class Customer : MonoBehaviour
         }
     }
 
+    // This function makes the customer comes to the cashier when it's their turn
     void OnGetNextCustomer()
     {
         if(CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
@@ -119,7 +122,6 @@ public class Customer : MonoBehaviour
         interactCollider.enabled = toggle;
 
         if (!toggle) outline.enabled = false; // Fix bug
-            
     }
 
     // These 3 gets called in dialogue
@@ -134,5 +136,30 @@ public class Customer : MonoBehaviour
     public void AdjustStock(int amount)
     {
         BookstoreStatsBar.Instance.AdjustStock(amount);
+    }
+
+    public void StartConversation()
+    {
+        ConversationManager.Instance.StartConversation(conversation);
+        SetConversationParameters();
+    }
+
+    public void FlagHasBeenTalkedTo()
+    {
+        hasBeenTalkedTo = true;
+    }
+    public void FlagHasCheckedOut()
+    {
+        hasCheckedOut = true;
+    }
+    public bool HasTalkedNHasCheckedOut()
+    {
+        if(hasBeenTalkedTo && hasCheckedOut) return true;
+        return false;
+    }
+
+    public void SetConversationParameters()
+    {
+        ConversationManager.Instance.SetBool("hasBeenTalkedTo", hasBeenTalkedTo);
     }
 }

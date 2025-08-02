@@ -28,6 +28,7 @@ public class CustomerQueueManager : MonoBehaviour
 
     [Header("Debugging")]
     [SerializeField] GameObject currentCustomer;
+    Customer currentCustomerComponent;
     Queue<GameObject> customerQueue;
     Queue<GameObject> customerWaitingToSpawn;
 
@@ -60,6 +61,7 @@ public class CustomerQueueManager : MonoBehaviour
         SpawnCustomer();
 
         currentCustomer = customerQueue.Peek();
+        currentCustomerComponent = currentCustomer.GetComponent<Customer>();
 
         InvokeRepeating("SpawnCustomer", 5f, 5f);
 
@@ -84,7 +86,6 @@ public class CustomerQueueManager : MonoBehaviour
     void OnCustomerCome()
     {
         cashierStatus = CurrentCashierStatus.Occcupied;
-        Customer currentCustomerComponent = currentCustomer.GetComponent<Customer>();
 
         if (currentCustomerComponent.book1Prefab != null)
             book1OnTable = Instantiate(currentCustomerComponent.book1Prefab, book1OnTablePositionPoint.transform);
@@ -101,22 +102,47 @@ public class CustomerQueueManager : MonoBehaviour
 
     void OnChangeSubmit()
     {
-        currentCustomer.GetComponent<Customer>().EnableInteraction(false);
-        GetNextCustomer();
-        ClearTable();
-        DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
+        currentCustomerComponent.FlagHasCheckedOut();
+        
+        if (currentCustomerComponent.customerType == CustomerType.BuyOnly)
+        {
+            currentCustomerComponent.EnableInteraction(false);
+            GetNextCustomer();
+            ClearTable();
+            DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
+        }
+        else if (currentCustomerComponent.customerType == CustomerType.TalkNBuy && currentCustomerComponent.HasTalkedNHasCheckedOut())
+        {
+            currentCustomerComponent.EnableInteraction(false);
+            GetNextCustomer();
+            ClearTable();
+            DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
+            DayEndedBehaviour.Instance.AddCustomersTalked(); 
+        }
+        else Debug.LogError("ERROR: Invalid CustomerType for " + gameObject.name);
     }
 
     void OnConversationEnded()
     {
-        if (currentCustomer.GetComponent<Customer>().customerType == CustomerType.TalkOnly)
+        currentCustomerComponent.FlagHasBeenTalkedTo();
+
+        if (currentCustomerComponent.customerType == CustomerType.TalkOnly)
         {
-            currentCustomer.GetComponent<Customer>().EnableInteraction(false);
+            currentCustomerComponent.EnableInteraction(false);
             GetNextCustomer();
-            ClearTable();
-            DayEndedBehaviour.Instance.AddCustomersServed();
+            ClearTable(); 
+            DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
             DayEndedBehaviour.Instance.AddCustomersTalked();
         }
+        else if (currentCustomerComponent.customerType == CustomerType.TalkNBuy && currentCustomerComponent.HasTalkedNHasCheckedOut())
+        {
+            currentCustomerComponent.EnableInteraction(false);
+            GetNextCustomer();
+            ClearTable();
+            DayEndedBehaviour.Instance.AddCustomersServed(); // correct or wrong is called in CashManager.cs
+            DayEndedBehaviour.Instance.AddCustomersTalked();
+        }
+        else Debug.LogError("ERROR: Invalid CustomerType for " + gameObject.name);
     }
 
     void GetNextCustomer()
@@ -130,6 +156,8 @@ public class CustomerQueueManager : MonoBehaviour
         if (customerQueue.TryPeek(out GameObject nextCustomer))
         {
             currentCustomer = nextCustomer;
+            currentCustomerComponent = nextCustomer.GetComponent<Customer>();
+
             Events.onGetNextCustomer.Trigger();
         }
         else
