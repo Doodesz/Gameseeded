@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Entities.UniversalDelegates;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -366,7 +367,7 @@ namespace DialogueEditor
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
-            if (t > 1)
+            if (t > 1.5f)
             {
                 SetState(eState.Idle);
                 return;
