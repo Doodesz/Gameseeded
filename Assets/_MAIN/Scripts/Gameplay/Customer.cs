@@ -53,7 +53,7 @@ public class Customer : MonoBehaviour
 
         isCheckingOut = false;
 
-        if (CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+        if (CustomerNDayManager.Instance.GetCurrentCustomer() == gameObject)
             animator.SetBool("isCheckingOut", true);
 
         if(book1Prefab != null)
@@ -91,7 +91,7 @@ public class Customer : MonoBehaviour
     {
         booksContainer.SetActive(false);
 
-        if (CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+        if (CustomerNDayManager.Instance.GetCurrentCustomer() == gameObject)
         {
             EnableInteraction(true);
             
@@ -110,7 +110,7 @@ public class Customer : MonoBehaviour
     // This function makes the customer comes to the cashier when it's their turn
     void OnGetNextCustomer()
     {
-        if(CustomerQueueManager.Instance.GetCurrentCustomer() == gameObject)
+        if(CustomerNDayManager.Instance.GetCurrentCustomer() == gameObject)
         {
             animator.SetBool("isCheckingOut", true);
         }
@@ -126,15 +126,15 @@ public class Customer : MonoBehaviour
     // These 3 gets called in dialogue
     public void AdjustTrust(int amount)
     {
-        BookstoreStatsBar.Instance.AdjustTrust(amount);
+        BookstoreStatsManager.Instance.AdjustTrust(amount);
     }
     public void AdjustMoney(int amount)
     {
-        BookstoreStatsBar.Instance.AdjustMoney(amount);
+        BookstoreStatsManager.Instance.AdjustMoney(amount);
     }
     public void AdjustStock(int amount)
     {
-        BookstoreStatsBar.Instance.AdjustStock(amount);
+        BookstoreStatsManager.Instance.AdjustStock(amount);
     }
 
     public void StartConversation()

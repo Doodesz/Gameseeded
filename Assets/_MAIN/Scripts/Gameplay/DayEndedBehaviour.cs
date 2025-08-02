@@ -1,5 +1,7 @@
+using BayatGames.SaveGameFree;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DayEndedBehaviour : MonoBehaviour
@@ -26,6 +28,7 @@ public class DayEndedBehaviour : MonoBehaviour
     [SerializeField] int customersCorrectChange;
     [SerializeField] int customersWrongChange;
     [SerializeField] int customersTalked;
+    BookstoreStatsManager bookstoreStatsManager;
 
     public static DayEndedBehaviour Instance;
 
@@ -46,6 +49,8 @@ public class DayEndedBehaviour : MonoBehaviour
 
     private void Start()
     {
+        bookstoreStatsManager = BookstoreStatsManager.Instance;
+
         // get initial parameters stats
         customersServed = 0;
         customersCorrectChange = 0;
@@ -53,6 +58,8 @@ public class DayEndedBehaviour : MonoBehaviour
         customersTalked = 0;
 
         dayEndedScreen.SetActive(false);
+
+        UpdateParametersBars();
     }
 
     void OnDayEnded()
@@ -66,24 +73,33 @@ public class DayEndedBehaviour : MonoBehaviour
 
         trustBar.maxValue = trustBarRef.maxValue;
         trustBar.minValue = trustBarRef.minValue;
-        trustBar.value = trustBarRef.value;
+        trustBar.value = bookstoreStatsManager.GetTrustStat();
 
         moneyBar.maxValue = moneyBarRef.maxValue;
         moneyBar.minValue = moneyBarRef.minValue;
-        moneyBar.value = moneyBarRef.value;
+        moneyBar.value = bookstoreStatsManager.GetMoneyStat();
 
         stockBar.maxValue = stockBarRef.maxValue;
         stockBar.minValue = stockBarRef.minValue;
-        stockBar.value = stockBarRef.value;
+        stockBar.value = bookstoreStatsManager.GetStockStat();
+    }
+
+    void UpdateParametersBars()
+    {
+        trustBar.value = bookstoreStatsManager.GetTrustStat();
+        moneyBar.value = bookstoreStatsManager.GetMoneyStat();
+        stockBar.value = bookstoreStatsManager.GetStockStat();
     }
 
     // Called by buy more stock button
     public void OnBuyStockClick()
     {
-        if (moneyBar.value > 0 && stockBar.value < stockBar.maxValue)
+        if (bookstoreStatsManager.GetMoneyStat() > 0 && bookstoreStatsManager.GetStockStat() < bookstoreStatsManager.maxStock)
         {
-            stockBar.value += 2;
-            moneyBar.value -= 1;
+            bookstoreStatsManager.AdjustStock(2);
+            bookstoreStatsManager.AdjustMoney(-1);
+
+            UpdateParametersBars();
         }
         else
             Debug.Log("Not enough money or stock is already at max!");
@@ -92,23 +108,27 @@ public class DayEndedBehaviour : MonoBehaviour
     // Called by save n continue button
     public void OnSaveNContinueClick()
     {
-        SaveGame();
-        Debug.Log("Save and continuing...");
+        SaveCurrentGame();
+        SceneManager.LoadScene("Gameplay");
 
-        // continue to next day
+        Debug.Log("Save and continuing...");
     }
 
     public void OnSaveNExitClick()
     {
-        SaveGame();
+        SaveCurrentGame();
+        SceneManager.LoadScene("Main Menu");
+        
         Debug.Log("Save and quitting...");
-
-        // exit to main menu
     }
 
-    void SaveGame()
+    void SaveCurrentGame()
     {
         // save parameters and last day completed
+        SaveGame.Save<int>("lastDay", CustomerNDayManager.Instance.GetCurrentDayIndex());
+        SaveGame.Save<int>("trustStat", BookstoreStatsManager.Instance.GetTrustStat());
+        SaveGame.Save<int>("moneyStat", BookstoreStatsManager.Instance.GetMoneyStat());
+        SaveGame.Save<int>("stockStat", BookstoreStatsManager.Instance.GetStockStat());
     }
 
     public void AddCustomersServed()

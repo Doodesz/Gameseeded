@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [Tooltip("Debugging")]
     public GameObject selectedObj;
     CashManager runManager;
-    CustomerQueueManager customerQueueManager;
+    CustomerNDayManager customerQueueManager;
 
     public static Player Instance;
 
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         runManager = CashManager.Instance;
-        customerQueueManager = CustomerQueueManager.Instance;
+        customerQueueManager = CustomerNDayManager.Instance;
     }
 
     void Update()
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied)
+                    if (customerQueueManager.cashierStatus == CustomerNDayManager.CurrentCashierStatus.Occcupied)
                         runManager.AddCash(cash.cashAmount);
                     break;
 
@@ -97,12 +97,12 @@ public class Player : MonoBehaviour
                         Debug.LogError("ERROR: Cannot get CashObject script component of " + selectedObj.name);
                         break;
                     }
-                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied)
+                    if (customerQueueManager.cashierStatus == CustomerNDayManager.CurrentCashierStatus.Occcupied)
                         runManager.RemoveCash(cash.cashAmount);
                     break;
 
                 case InteractType.SubmitChangeButton:
-                    if (customerQueueManager.cashierStatus == CustomerQueueManager.CurrentCashierStatus.Occcupied
+                    if (customerQueueManager.cashierStatus == CustomerNDayManager.CurrentCashierStatus.Occcupied
                         && customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType != CustomerType.TalkOnly)
                         CashManager.Instance.SubmitCash();
                     else if (customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.TalkOnly)
