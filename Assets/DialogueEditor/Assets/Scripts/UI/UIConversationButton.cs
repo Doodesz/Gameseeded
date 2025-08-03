@@ -211,6 +211,10 @@ namespace DialogueEditor
 
         private void DoClickBehaviour()
         {
+            if (ConversationManager.Instance.isTimedOut) return;
+
+            ConversationManager.Instance.ClickTimeoutBuffer();
+
             switch (m_buttonType)
             {
                 case eButtonType.Speech:
