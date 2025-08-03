@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &447954947661828230
+--- !u!1 &159354311932635743
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,78 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2124053987276162299}
-  - component: {fileID: 4537045065656414730}
-  - component: {fileID: 2371994786650301066}
-  - component: {fileID: 7184253856462767439}
-  - component: {fileID: 7640318482299713557}
-  - component: {fileID: 853717306983605399}
-  - component: {fileID: 4712521837603087949}
+  - component: {fileID: 5099856445485149189}
+  m_Layer: 0
+  m_Name: Book 3 pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5099856445485149189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159354311932635743}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.321, y: -0, z: -0.022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4769710151576223180}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1386483205563644338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4769710151576223180}
+  m_Layer: 0
+  m_Name: Books container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4769710151576223180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386483205563644338}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5000002, y: -0.4999999, z: 0.49999997, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0.22151488, z: 0.10415697}
+  m_LocalScale: {x: 0.7795212, y: 0.7795212, z: 0.7795213}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 8001146684378734772}
+  - {fileID: 5936335441055377049}
+  - {fileID: 5099856445485149189}
+  m_Father: {fileID: 4448823085666381987}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &2998318629582530994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7993028394924684750}
+  - component: {fileID: 2853885437697432215}
+  - component: {fileID: 6268943222335322993}
+  - component: {fileID: 273051771410086127}
+  - component: {fileID: 1761592065540220650}
+  - component: {fileID: 3074746845452256077}
+  - component: {fileID: 1360959656047485336}
   m_Layer: 0
   m_Name: 4 KelinciMC-Bao
   m_TagString: Interactable
@@ -22,30 +87,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2124053987276162299
+--- !u!4 &7993028394924684750
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.231865, y: 0.025000572, z: -4.94371}
+  m_LocalPosition: {x: -4.8086686, y: 0.025000572, z: -5.086956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3428531230039474189}
-  - {fileID: 8256582455647358239}
+  - {fileID: 4794285037638756046}
+  - {fileID: 5073423757959247348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4537045065656414730
+--- !u!114 &2853885437697432215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94d2bb7bddd07054e8fc3bce4c9c5599, type: 3}
@@ -56,26 +121,26 @@ MonoBehaviour:
   book1Prefab: {fileID: 4035441269037404007, guid: 9a7c10b6d9359624cb77508a78cbd1be, type: 3}
   book2Prefab: {fileID: 3950818229613042119, guid: 7b3c40deda29d29418b95e4135a1a594, type: 3}
   book3Prefab: {fileID: 0}
-  conversation: {fileID: 4712521837603087949}
-  animator: {fileID: 2371994786650301066}
-  avatarAnimator: {fileID: 8751824663671986807}
-  booksContainer: {fileID: 3021002026884555383}
-  interactCollider: {fileID: 853717306983605399}
-  outline: {fileID: 7184253856462767439}
-  book1PositionPoint: {fileID: 2014047503086108507}
-  book2PositionPoint: {fileID: 4799062501109334404}
-  book3PositionPoint: {fileID: 5986377465367576657}
+  conversation: {fileID: 1360959656047485336}
+  animator: {fileID: 6268943222335322993}
+  avatarAnimator: {fileID: 1470588021778709684}
+  booksContainer: {fileID: 1386483205563644338}
+  interactCollider: {fileID: 3074746845452256077}
+  outline: {fileID: 273051771410086127}
+  book1PositionPoint: {fileID: 6899411730953217990}
+  book2PositionPoint: {fileID: 6646804985223750332}
+  book3PositionPoint: {fileID: 159354311932635743}
   isCheckingOut: 0
   hasBeenTalkedTo: 0
   hasCheckedOut: 0
---- !u!95 &2371994786650301066
+--- !u!95 &6268943222335322993
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e7911b235367c44d81fa8b4bf3df5b8, type: 2}
@@ -90,13 +155,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7184253856462767439
+--- !u!114 &273051771410086127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
@@ -108,27 +173,27 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &7640318482299713557
+--- !u!114 &1761592065540220650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 140afc2ce2c01ca4ab87a2bafe0015d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisTypeOfInteractable: 3
-  outline: {fileID: 7184253856462767439}
---- !u!136 &853717306983605399
+  outline: {fileID: 273051771410086127}
+--- !u!136 &3074746845452256077
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -145,45 +210,46 @@ CapsuleCollider:
   m_Height: 3.69
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!114 &4712521837603087949
+--- !u!114 &1360959656047485336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447954947661828230}
+  m_GameObject: {fileID: 2998318629582530994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 9
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":-3.20000458,"yPos":130.999985},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Mungkin
-    kamu lupa simpan? Coba dicek di belakang\nrak buku fiksi.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":418.400024,"yPos":124.599991},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Aku
-    tidak tahu, kenapa kamu taruh biskuit wortel\ndi rak buku!","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasBeenTalkedTo","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":215.200012,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hai...
-    aku taruh biskuit wortel spesialku di rak buku tadi. Tapi sekarang hilang.\nAneh
-    banget. Kamu sempat lihat?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-27.2000046,"yPos":225.6},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Coba
-    aku cek dulu","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":421.600037,"yPos":228},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Aku
-    sedang mengambil buku tau!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 10
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":23.9999466,"yPos":287.8},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Mungkin
+    kamu lupa simpan? Coba dicek di belakang\nrak buku fiksi.","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":445.599976,"yPos":281.399963},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Aku
+    tidak tahu, kenapa kamu taruh biskuit wortel\ndi rak buku!","parentUIDs":[0,9],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasBeenTalkedTo","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasBeenTalkedTo","CheckType":0,"RequiredValue":false}],"NodeUID":9}],"EditorInfo":{"isRoot":true,"xPos":232.799957,"yPos":61.1999969},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hai..","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-5.340576E-05,"yPos":382.399963},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Coba
+    aku cek dulu","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":448.8,"yPos":384.8},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Aku
+    sedang mengambil buku tau!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":228.799988,"yPos":164.000015},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Aku
+    taruh biskuit wortel spesialku di rak buku tadi. Tapi sekarang hilang.\nAneh
+    banget. Kamu sempat lihat?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bao","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Bao
   DefaultSprite: {fileID: 0}
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
-  - {fileID: 677029055196504429}
-  - {fileID: 7636187541144171913}
-  - {fileID: 7475325160149841267}
-  - {fileID: 3430842790233665552}
-  - {fileID: 3036829136664328920}
-  - {fileID: 5139003238801212989}
-  - {fileID: 6457374998127226248}
-  - {fileID: 7782336105584656167}
+  - {fileID: 813731392880243200}
+  - {fileID: 8230522612254418067}
+  - {fileID: 3966453545136745832}
+  - {fileID: 6376064885531895963}
+  - {fileID: 3205010750498101505}
+  - {fileID: 5643044556659821249}
+  - {fileID: 3787175181894000386}
+  - {fileID: 8363235512763030818}
+  - {fileID: 3899489059693937389}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &2014047503086108507
+--- !u!1 &3761908366706992158
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,80 +257,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4746257899830371086}
-  m_Layer: 0
-  m_Name: Book 1 pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4746257899830371086
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014047503086108507}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.00000004097819, y: 0.097843245, z: -0.000000014901159, w: 0.9952018}
-  m_LocalPosition: {x: 0.001, y: -0, z: -0.101}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4481148185470486580}
-  m_LocalEulerAnglesHint: {x: 0, y: 11.23, z: 0}
---- !u!1 &3021002026884555383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4481148185470486580}
-  m_Layer: 0
-  m_Name: Books container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4481148185470486580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3021002026884555383}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.5000002, y: -0.4999999, z: 0.49999997, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.22151488, z: 0.10415697}
-  m_LocalScale: {x: 0.7795212, y: 0.7795212, z: 0.7795213}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 4746257899830371086}
-  - {fileID: 2317469852300350997}
-  - {fileID: 5689622845858311}
-  m_Father: {fileID: 5810007649689278048}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!1 &3257361824259237035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8256582455647358239}
-  - component: {fileID: 677029055196504429}
-  - component: {fileID: 7636187541144171913}
-  - component: {fileID: 7475325160149841267}
-  - component: {fileID: 3430842790233665552}
-  - component: {fileID: 3036829136664328920}
-  - component: {fileID: 5139003238801212989}
-  - component: {fileID: 6457374998127226248}
-  - component: {fileID: 7782336105584656167}
+  - component: {fileID: 5073423757959247348}
+  - component: {fileID: 813731392880243200}
+  - component: {fileID: 8230522612254418067}
+  - component: {fileID: 3966453545136745832}
+  - component: {fileID: 6376064885531895963}
+  - component: {fileID: 3205010750498101505}
+  - component: {fileID: 5643044556659821249}
+  - component: {fileID: 3787175181894000386}
+  - component: {fileID: 8363235512763030818}
+  - component: {fileID: 3899489059693937389}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -272,28 +274,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8256582455647358239
+--- !u!4 &5073423757959247348
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.6473438, y: -2.8388352, z: 9.6302805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2124053987276162299}
+  m_Father: {fileID: 7993028394924684750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &677029055196504429
+--- !u!114 &813731392880243200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -306,13 +308,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &7636187541144171913
+--- !u!114 &8230522612254418067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -321,7 +323,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4537045065656414730}
+      - m_Target: {fileID: 2853885437697432215}
         m_TargetAssemblyTypeName: Customer, Assembly-CSharp
         m_MethodName: AdjustTrust
         m_Mode: 3
@@ -337,13 +339,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &7475325160149841267
+--- !u!114 &3966453545136745832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -352,7 +354,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4537045065656414730}
+      - m_Target: {fileID: 2853885437697432215}
         m_TargetAssemblyTypeName: Customer, Assembly-CSharp
         m_MethodName: AdjustTrust
         m_Mode: 3
@@ -368,13 +370,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &3430842790233665552
+--- !u!114 &6376064885531895963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -387,13 +389,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &3036829136664328920
+--- !u!114 &3205010750498101505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -406,13 +408,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &5139003238801212989
+--- !u!114 &5643044556659821249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -425,13 +427,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &6457374998127226248
+--- !u!114 &3787175181894000386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -444,13 +446,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &7782336105584656167
+--- !u!114 &8363235512763030818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3257361824259237035}
+  m_GameObject: {fileID: 3761908366706992158}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -463,7 +465,26 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!1 &4799062501109334404
+--- !u!114 &3899489059693937389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761908366706992158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 9
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!1 &6646804985223750332
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -471,7 +492,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2317469852300350997}
+  - component: {fileID: 5936335441055377049}
   m_Layer: 0
   m_Name: Book 2 pos
   m_TagString: Untagged
@@ -479,22 +500,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2317469852300350997
+--- !u!4 &5936335441055377049
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4799062501109334404}
+  m_GameObject: {fileID: 6646804985223750332}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000013038517, y: -0.08389018, z: -0.0000000614673, w: 0.99647504}
   m_LocalPosition: {x: -0.000121798366, y: -0.00000013797123, z: 0.101457365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4481148185470486580}
+  m_Father: {fileID: 4769710151576223180}
   m_LocalEulerAnglesHint: {x: 0, y: -9.624, z: 0}
---- !u!1 &5986377465367576657
+--- !u!1 &6899411730953217990
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -502,36 +523,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5689622845858311}
+  - component: {fileID: 8001146684378734772}
   m_Layer: 0
-  m_Name: Book 3 pos
+  m_Name: Book 1 pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5689622845858311
+--- !u!4 &8001146684378734772
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5986377465367576657}
+  m_GameObject: {fileID: 6899411730953217990}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.321, y: -0, z: -0.022}
+  m_LocalRotation: {x: 0.00000004097819, y: 0.097843245, z: -0.000000014901159, w: 0.9952018}
+  m_LocalPosition: {x: 0.001, y: -0, z: -0.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4481148185470486580}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1001 &2890800239456511974
+  m_Father: {fileID: 4769710151576223180}
+  m_LocalEulerAnglesHint: {x: 0, y: 11.23, z: 0}
+--- !u!1001 &4972538769615929637
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2124053987276162299}
+    m_TransformParent: {fileID: 7993028394924684750}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
       propertyPath: m_LocalScale.x
@@ -618,21 +639,21 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8700783698680967558, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4481148185470486580}
+      addedObject: {fileID: 4769710151576223180}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
---- !u!4 &3428531230039474189 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
-  m_PrefabInstance: {fileID: 2890800239456511974}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5810007649689278048 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
-  m_PrefabInstance: {fileID: 2890800239456511974}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8751824663671986807 stripped
+--- !u!95 &1470588021778709684 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
-  m_PrefabInstance: {fileID: 2890800239456511974}
+  m_PrefabInstance: {fileID: 4972538769615929637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4448823085666381987 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
+  m_PrefabInstance: {fileID: 4972538769615929637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4794285037638756046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ecf7af7358745d041b8bfeba18a05e73, type: 3}
+  m_PrefabInstance: {fileID: 4972538769615929637}
   m_PrefabAsset: {fileID: 0}
