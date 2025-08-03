@@ -6,20 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_MAIN/Scenes/Gameplay.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/_MAIN/Scenes/Main Menu.unity
     guid: 48550522b813459468d76502fa4ede29
   - enabled: 1
+    path: Assets/_MAIN/Scenes/Gameplay.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
     path: Assets/_MAIN/Scenes/Game Over No Money.unity
-    guid: 2456b471a6992c84bb4ecd1cdbf703c6
+    guid: 4274e05a628fa644fbc23c6684591393
   - enabled: 1
     path: Assets/_MAIN/Scenes/Game Over No Stock.unity
     guid: b12cf4fd4d3544241a1a56fde52f2965
   - enabled: 1
     path: Assets/_MAIN/Scenes/Game Over No Trust.unity
-    guid: 8ed0545c08f208e46aabe910cae08683
+    guid: d96dad0ae57bb814796b98b66197ac3c
   - enabled: 1
     path: Assets/_MAIN/Scenes/Cutscene Prologue.unity
     guid: a3bcb5ebec3a5854385ff487a5edd391

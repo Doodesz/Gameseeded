@@ -11388,6 +11388,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155947615}
     m_Modifications:
+    - target: {fileID: 2135673448685365868, guid: f6d5dc35a60cc37499f56164c094b2ac, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135673448685365868, guid: f6d5dc35a60cc37499f56164c094b2ac, type: 3}
+      propertyPath: precomputeOutline
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135673448685365868, guid: f6d5dc35a60cc37499f56164c094b2ac, type: 3}
+      propertyPath: bakeKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135673448685365868, guid: f6d5dc35a60cc37499f56164c094b2ac, type: 3}
+      propertyPath: bakeValues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2759569183025044735, guid: f6d5dc35a60cc37499f56164c094b2ac, type: 3}
       propertyPath: m_Name
       value: Uang 100
@@ -11554,6 +11570,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 155947615}
     m_Modifications:
+    - target: {fileID: 4574393325386325914, guid: acba997754597e94da91de5d2528d019, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574393325386325914, guid: acba997754597e94da91de5d2528d019, type: 3}
+      propertyPath: precomputeOutline
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574393325386325914, guid: acba997754597e94da91de5d2528d019, type: 3}
+      propertyPath: bakeKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574393325386325914, guid: acba997754597e94da91de5d2528d019, type: 3}
+      propertyPath: bakeValues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6669587803070570641, guid: acba997754597e94da91de5d2528d019, type: 3}
       propertyPath: m_Name
       value: Uang 10
@@ -11797,6 +11829,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1583786797708301948, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468065539467986645, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468065539467986645, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
+      propertyPath: precomputeOutline
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468065539467986645, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
+      propertyPath: bakeKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468065539467986645, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
+      propertyPath: bakeValues.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8520693185178896335, guid: 4342e0e6eda196b4ea2331454ff22353, type: 3}
