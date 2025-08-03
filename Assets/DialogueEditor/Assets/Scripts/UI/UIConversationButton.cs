@@ -182,7 +182,7 @@ namespace DialogueEditor
                 case eButtonType.Option:
                     {
                         TextMesh.text = node.Text;
-                        TextMesh.font = node.TMPFont;
+                        //TextMesh.font = node.TMPFont;
                     }
                     break;
 

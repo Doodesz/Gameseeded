@@ -122,7 +122,8 @@ public class Player : MonoBehaviour
     // Called in PlayerInput component of Player
     public void OnEscapePressed()
     {
-        if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing)      
+        if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing ||
+            GameStateManager.Instance.gameState == GameStateManager.GameState.OnConversation)      
             GameStateManager.Instance.TogglePauseGame();
     }
 }

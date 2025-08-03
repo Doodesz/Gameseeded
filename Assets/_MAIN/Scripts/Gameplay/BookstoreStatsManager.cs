@@ -1,5 +1,7 @@
 using BayatGames.SaveGameFree;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BookstoreStatsManager : MonoBehaviour
@@ -19,7 +21,20 @@ public class BookstoreStatsManager : MonoBehaviour
     [SerializeField][Range(0f, 10f)] int money;
     [SerializeField][Range(0f, 20f)] int stock;
 
+    enum GameOverType { noTrust, noMoney, noStock }
+    [Header("Debugging")]
+    GameOverType gameOverType;
+
     public static BookstoreStatsManager Instance;
+
+    private void OnEnable()
+    {
+        Events.onGameOver.Add(OnGameOver);
+    }
+    private void OnDisable()
+    {
+        Events.onGameOver.Remove(OnGameOver);
+    }
 
     private void Awake()
     {
@@ -34,12 +49,15 @@ public class BookstoreStatsManager : MonoBehaviour
         UpdateParametersBars();
     }
 
+    #region Adjust Parameters
     public void AdjustTrust(int amount)
     {
         trust += amount;
         if (trust > maxTrust) trust = maxTrust;
 
         UpdateParametersBars();
+
+        if (trust <= 0) Events.onGameOver.Trigger();
     }
     public void AdjustMoney(int amount)
     {
@@ -47,6 +65,8 @@ public class BookstoreStatsManager : MonoBehaviour
         if (money > maxMoney) money = maxMoney;
 
         UpdateParametersBars();
+
+        if (money <= 0) Events.onGameOver.Trigger();
     }
     public void AdjustStock(int amount)
     {
@@ -54,7 +74,10 @@ public class BookstoreStatsManager : MonoBehaviour
         if (stock > maxStock) stock = maxStock;
 
         UpdateParametersBars();
+
+        if (stock <= 0) Events.onGameOver.Trigger();
     }
+    #endregion
 
     void UpdateParametersBars()
     {
@@ -74,6 +97,7 @@ public class BookstoreStatsManager : MonoBehaviour
         stockBarSlider.maxValue = maxStock;
     }
 
+    #region GetStats
     public int GetTrustStat()
     {
         return trust;
@@ -86,11 +110,46 @@ public class BookstoreStatsManager : MonoBehaviour
     {
         return stock;
     }
+    #endregion
 
     void LoadParametersStats()
     {
         trust = SaveGame.Load<int>("trustStat");
         money = SaveGame.Load<int>("moneyStat");
         stock = SaveGame.Load<int>("stockStat");
+    }
+
+    void OnGameOver()
+    {
+        if (trust <= 0)
+        {
+            StartCoroutine(GameOverNoTrust());
+        }
+        else if (money <= 0)
+        {
+            StartCoroutine(GameOverNoMoney());
+        }
+        else
+        {
+            StartCoroutine(GameOverNoStock());
+        }
+    }
+
+    IEnumerator GameOverNoTrust()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Game Over No Trust");
+    }
+
+    IEnumerator GameOverNoMoney()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Game Over No Money");
+    }
+
+    IEnumerator GameOverNoStock()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Game Over No Stock");
     }
 }

@@ -83,7 +83,7 @@ public class GameStateManager : MonoBehaviour
     public void TogglePauseGame()
     {
         if (gameState == GameState.Paused) { ResumeGame(); }
-        else if (gameState == GameState.Playing) { PauseGame(); }
+        else if (gameState == GameState.Playing || gameState == GameState.OnConversation) { PauseGame(); }
     }
 
     public void ExitGame()
