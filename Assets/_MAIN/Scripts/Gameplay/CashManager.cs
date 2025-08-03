@@ -12,7 +12,8 @@ public class CashManager : MonoBehaviour
     [SerializeField] GameObject cash10StackPos;
     [SerializeField] GameObject cash100StackPos;
     [SerializeField] TextMeshPro cashRegOnCounterDisplayText;
-    [SerializeField] TextMeshPro cashRegChangeDisplayText;
+    [SerializeField] TextMeshPro cashRegPriceDisplayText;
+    [SerializeField] TextMeshPro cashRegPaidDisplayText;
 
     [Header("Parameters")]
     [SerializeField] float stackGap;
@@ -20,6 +21,7 @@ public class CashManager : MonoBehaviour
     [Header("Debugging")]
     public int currentChangeAmount;
     public int currentChangeNeeded;
+    [SerializeField] int randomPrice;
     public int cash1Amount;
     public int cash10Amount;
     public int cash100Amount;
@@ -38,8 +40,9 @@ public class CashManager : MonoBehaviour
 
     void Start()
     {
-        UpdateCashRegisterChangeDisplay("Menunggu...");
+        UpdateCashRegisterPriceDisplay("...");
         UpdateCashRegisterOnCounterDisplay("Menunggu...");
+        UpdateCashRegisterPaidDisplay("...");
 
         currentChangeAmount = 0;
     }
@@ -68,8 +71,9 @@ public class CashManager : MonoBehaviour
         Events.onChangeSubmit.Trigger();
         RemoveAllCashStacks();
 
-        UpdateCashRegisterChangeDisplay("Menunggu...");
+        UpdateCashRegisterPriceDisplay("...");
         UpdateCashRegisterOnCounterDisplay("Menunggu...");
+        UpdateCashRegisterPaidDisplay("...");
     }
 
     public void AddCash(int amount)
@@ -135,9 +139,23 @@ public class CashManager : MonoBehaviour
     {
         cashRegOnCounterDisplayText.text = displayText;
     }
-    public void UpdateCashRegisterChangeDisplay(string displayText)
+    public void UpdateCashRegisterPriceDisplay()
     {
-        cashRegChangeDisplayText.text = displayText;
+        randomPrice = Random.Range(1000, 10001);
+
+        cashRegPriceDisplayText.text = randomPrice.ToString();
+    }
+    public void UpdateCashRegisterPriceDisplay(string displayText)
+    {
+        cashRegPriceDisplayText.text = displayText;
+    }
+    public void UpdateCashRegisterPaidDisplay()
+    {
+        cashRegPaidDisplayText.text = (randomPrice + currentChangeNeeded).ToString();
+    }
+    public void UpdateCashRegisterPaidDisplay(string displayText)
+    {
+        cashRegPaidDisplayText.text = displayText;
     }
 
     void AddCash1ToStack()

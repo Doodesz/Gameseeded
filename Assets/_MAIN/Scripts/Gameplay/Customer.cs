@@ -97,8 +97,9 @@ public class Customer : MonoBehaviour
             
             if (customerType != CustomerType.TalkOnly)
             {
-                CashManager.Instance.UpdateCashRegisterChangeDisplay(change.ToString());
                 CashManager.Instance.currentChangeNeeded = change;
+                CashManager.Instance.UpdateCashRegisterPriceDisplay();
+                CashManager.Instance.UpdateCashRegisterPaidDisplay();
             }
             else
             {
