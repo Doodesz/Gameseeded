@@ -1990,12 +1990,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cashierStatus: 0
   customerQueueList:
-  - {fileID: 2963411889096180562, guid: c9300c56dd2db207ab9659e1de493cc4, type: 3}
-  - {fileID: 8738905499359984268, guid: 78f8548ad6ce37c69b21f2e557d4a1c2, type: 3}
-  - {fileID: 8190987184552865634, guid: 20de0961ed266a9ffafdebaf71223f64, type: 3}
-  - {fileID: 283823592927237290, guid: 4bc70d4653c7b0e6b9005c9ca6a486f1, type: 3}
-  - {fileID: 2165634966555842829, guid: 878ce76c84663c4cfba02ba65f21e6b6, type: 3}
-  - {fileID: 473906903858069811, guid: 5be17031cc058e46f9676bdb6cf99c3f, type: 3}
+  - {fileID: 305742521794511471, guid: 935bb562ab571d5e6b15896c9f1199f8, type: 3}
+  - {fileID: 4668388117124759756, guid: 12d87edd16890dd52bcb16dce6efb62e, type: 3}
+  - {fileID: 7699281090782142574, guid: 81543821196969648af98e3d9c9bd25b, type: 3}
+  - {fileID: 6409914735653500046, guid: 084331c5f6823041b9c843fae95d7d86, type: 3}
+  - {fileID: 3740594095013427359, guid: f8b2eb2deba2c6f12a7b803d5aac1214, type: 3}
+  - {fileID: 7892880452262097174, guid: ff2cb7465ecadecdbabee41b3970ed6f, type: 3}
   submitChangeButton: {fileID: 286616793}
   customerSpawnPoint: {fileID: 1875209793}
   book1OnTablePositionPoint: {fileID: 1089149567}

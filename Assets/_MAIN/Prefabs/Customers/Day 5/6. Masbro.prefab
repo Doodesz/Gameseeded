@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1772722773091920011
+--- !u!1 &329792121503937584
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5440160560086998907}
-  m_Layer: 0
-  m_Name: Books container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5440160560086998907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772722773091920011}
-  serializedVersion: 2
-  m_LocalRotation: {x: 6.3119492e-12, y: 0.6420386, z: 0.76667225, w: -3.5036455e-12}
-  m_LocalPosition: {x: 0, y: -0.003, z: 0.072}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 8469254865698400032}
-  - {fileID: 2402518632533249114}
-  - {fileID: 6114282759905233179}
-  m_Father: {fileID: 4445378279326934803}
-  m_LocalEulerAnglesHint: {x: -100.112, y: 180, z: 0}
---- !u!1 &2166840106826067233
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8469254865698400032}
+  - component: {fileID: 3132222628723874021}
   m_Layer: 0
   m_Name: Book 1 pos
   m_TagString: Untagged
@@ -50,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8469254865698400032
+--- !u!4 &3132222628723874021
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2166840106826067233}
+  m_GameObject: {fileID: 329792121503937584}
   serializedVersion: 2
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5440160560086998907}
+  m_Father: {fileID: 1682925037993695915}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
---- !u!1 &2565122410147243835
+--- !u!1 &2779258931422182066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,7 +39,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6114282759905233179}
+  - component: {fileID: 6248440379694362467}
   m_Layer: 0
   m_Name: Book 3 pos
   m_TagString: Untagged
@@ -81,22 +47,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6114282759905233179
+--- !u!4 &6248440379694362467
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565122410147243835}
+  m_GameObject: {fileID: 2779258931422182066}
   serializedVersion: 2
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
   m_LocalPosition: {x: 0, y: 0, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5440160560086998907}
+  m_Father: {fileID: 1682925037993695915}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
---- !u!1 &2981950950175928959
+--- !u!1 &3444634459906173559
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +70,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2402518632533249114}
+  - component: {fileID: 7474426302284153596}
   m_Layer: 0
   m_Name: Book 2 pos
   m_TagString: Untagged
@@ -112,22 +78,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2402518632533249114
+--- !u!4 &7474426302284153596
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981950950175928959}
+  m_GameObject: {fileID: 3444634459906173559}
   serializedVersion: 2
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
   m_LocalPosition: {x: -0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5440160560086998907}
+  m_Father: {fileID: 1682925037993695915}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
---- !u!1 &5623919755810075196
+--- !u!1 &5963038534787403355
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,13 +101,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7786138510116743496}
-  - component: {fileID: 5491574539517279194}
-  - component: {fileID: 3914427391853710418}
-  - component: {fileID: 5604305337476793099}
-  - component: {fileID: 6153225821305302506}
-  - component: {fileID: 8926597574956652639}
-  - component: {fileID: 8359006869541182882}
+  - component: {fileID: 1682925037993695915}
+  m_Layer: 0
+  m_Name: Books container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1682925037993695915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963038534787403355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 6.3119492e-12, y: 0.6420386, z: 0.76667225, w: -3.5036455e-12}
+  m_LocalPosition: {x: 0, y: -0.003, z: 0.072}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 3132222628723874021}
+  - {fileID: 7474426302284153596}
+  - {fileID: 6248440379694362467}
+  m_Father: {fileID: 5507978009532130239}
+  m_LocalEulerAnglesHint: {x: -100.112, y: 180, z: 0}
+--- !u!1 &7167534771280633056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689403713769343111}
+  - component: {fileID: 3728812599254887302}
+  - component: {fileID: 1495847677532951846}
+  - component: {fileID: 6430099349825329008}
+  - component: {fileID: 7387958348089425386}
+  - component: {fileID: 4804559693257228839}
+  - component: {fileID: 467737756842864394}
   m_Layer: 0
   m_Name: 6. Masbro
   m_TagString: Interactable
@@ -149,30 +149,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7786138510116743496
+--- !u!4 &1689403713769343111
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2273703, y: 0.025001049, z: -8.82483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4793230986057544062}
-  - {fileID: 1454506334431385226}
+  - {fileID: 3694527297107097042}
+  - {fileID: 8730885646072508694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5491574539517279194
+--- !u!114 &3728812599254887302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94d2bb7bddd07054e8fc3bce4c9c5599, type: 3}
@@ -183,25 +183,25 @@ MonoBehaviour:
   book1Prefab: {fileID: 0}
   book2Prefab: {fileID: 0}
   book3Prefab: {fileID: 0}
-  conversation: {fileID: 8359006869541182882}
-  animator: {fileID: 6153225821305302506}
-  avatarAnimator: {fileID: 1469535752745855748}
-  booksContainer: {fileID: 1772722773091920011}
-  interactCollider: {fileID: 8926597574956652639}
-  outline: {fileID: 3914427391853710418}
-  book1PositionPoint: {fileID: 2166840106826067233}
-  book2PositionPoint: {fileID: 2981950950175928959}
-  book3PositionPoint: {fileID: 2565122410147243835}
+  conversation: {fileID: 467737756842864394}
+  animator: {fileID: 7387958348089425386}
+  avatarAnimator: {fileID: 7324460291401494440}
+  booksContainer: {fileID: 5963038534787403355}
+  interactCollider: {fileID: 4804559693257228839}
+  outline: {fileID: 1495847677532951846}
+  book1PositionPoint: {fileID: 329792121503937584}
+  book2PositionPoint: {fileID: 3444634459906173559}
+  book3PositionPoint: {fileID: 2779258931422182066}
   isCheckingOut: 0
   hasBeenTalkedTo: 0
   hasCheckedOut: 0
---- !u!114 &3914427391853710418
+--- !u!114 &1495847677532951846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
@@ -213,28 +213,28 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &5604305337476793099
+--- !u!114 &6430099349825329008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 140afc2ce2c01ca4ab87a2bafe0015d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisTypeOfInteractable: 3
-  outline: {fileID: 3914427391853710418}
---- !u!95 &6153225821305302506
+  outline: {fileID: 1495847677532951846}
+--- !u!95 &7387958348089425386
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
   m_Controller: {fileID: 9100000, guid: a78ccbb92a1c19e4997af86709f88315, type: 2}
@@ -249,13 +249,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &8926597574956652639
+--- !u!136 &4804559693257228839
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -272,38 +272,38 @@ CapsuleCollider:
   m_Height: 3.69
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!114 &8359006869541182882
+--- !u!114 &467737756842864394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623919755810075196}
+  m_GameObject: {fileID: 7167534771280633056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 5
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":231,"yPos":295},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Karena
-    aku akan tetap di sini, dan aku akan ingat kamu datang.","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":518,"yPos":296},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Berisik.
-    Kapan kamu akan dewasa?","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasBeenTalkedTo","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasBeenTalkedTo","CheckType":0,"RequiredValue":false}],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":369,"yPos":56},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Halo","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Masbro","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":372,"yPos":169},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Berikan
-    aku satu alasan... kenapa aku harus datang lagi besok.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Masbro","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":151,"yPos":332},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Karena
+    aku akan tetap di sini, dan aku akan ingat kamu datang.","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":438,"yPos":333},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Berisik.
+    Kapan kamu akan dewasa?","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasBeenTalkedTo","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasBeenTalkedTo","CheckType":0,"RequiredValue":false}],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":289,"yPos":93},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Halo","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Masbro","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":292,"yPos":206},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Berikan
+    aku satu alasan... kenapa aku harus datang lagi besok.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Masbro","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: Masbro
   DefaultSprite: {fileID: 0}
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
-  - {fileID: 1986532954617701233}
-  - {fileID: 1825872569766242827}
-  - {fileID: 3577199497657363795}
-  - {fileID: 3098517267749718480}
+  - {fileID: 743857245985329683}
+  - {fileID: 8448317805627737656}
+  - {fileID: 7309364455119445065}
+  - {fileID: 5717439699635347336}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &8052415273651245472
+--- !u!1 &7663017854226138381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,11 +311,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1454506334431385226}
-  - component: {fileID: 1986532954617701233}
-  - component: {fileID: 1825872569766242827}
-  - component: {fileID: 3577199497657363795}
-  - component: {fileID: 3098517267749718480}
+  - component: {fileID: 8730885646072508694}
+  - component: {fileID: 743857245985329683}
+  - component: {fileID: 8448317805627737656}
+  - component: {fileID: 7309364455119445065}
+  - component: {fileID: 5717439699635347336}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -323,28 +323,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1454506334431385226
+--- !u!4 &8730885646072508694
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052415273651245472}
+  m_GameObject: {fileID: 7663017854226138381}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.6473438, y: -2.8388352, z: 9.6302805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7786138510116743496}
+  m_Father: {fileID: 1689403713769343111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1986532954617701233
+--- !u!114 &743857245985329683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052415273651245472}
+  m_GameObject: {fileID: 7663017854226138381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -356,14 +356,14 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!114 &1825872569766242827
+  Audio: {fileID: 8300000, guid: 07300432ba1e27a82a9322b21f620429, type: 3}
+--- !u!114 &8448317805627737656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052415273651245472}
+  m_GameObject: {fileID: 7663017854226138381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -375,14 +375,14 @@ MonoBehaviour:
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!114 &3577199497657363795
+  Audio: {fileID: 8300000, guid: 09cd9c77ecd05f10fb0c2f736f1745a1, type: 3}
+--- !u!114 &7309364455119445065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052415273651245472}
+  m_GameObject: {fileID: 7663017854226138381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -391,7 +391,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5491574539517279194}
+      - m_Target: {fileID: 3728812599254887302}
         m_TargetAssemblyTypeName: Customer, Assembly-CSharp
         m_MethodName: AdjustTrust
         m_Mode: 3
@@ -407,13 +407,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &3098517267749718480
+--- !u!114 &5717439699635347336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052415273651245472}
+  m_GameObject: {fileID: 7663017854226138381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
@@ -426,13 +426,13 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!1001 &4975988661329303189
+--- !u!1001 &3805295935348544057
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7786138510116743496}
+    m_TransformParent: {fileID: 1689403713769343111}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
       propertyPath: m_LocalScale.x
@@ -507,21 +507,21 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8700783698680967558, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5440160560086998907}
+      addedObject: {fileID: 1682925037993695915}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
---- !u!95 &1469535752745855748 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
-  m_PrefabInstance: {fileID: 4975988661329303189}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4445378279326934803 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
-  m_PrefabInstance: {fileID: 4975988661329303189}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4793230986057544062 stripped
+--- !u!4 &3694527297107097042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
-  m_PrefabInstance: {fileID: 4975988661329303189}
+  m_PrefabInstance: {fileID: 3805295935348544057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5507978009532130239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+  m_PrefabInstance: {fileID: 3805295935348544057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7324460291401494440 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d93bf9cb67f1e9144aafa2f4229b376b, type: 3}
+  m_PrefabInstance: {fileID: 3805295935348544057}
   m_PrefabAsset: {fileID: 0}
