@@ -1989,7 +1989,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cashierStatus: 0
   customerQueueList:
-  - {fileID: 0}
+  - {fileID: 3379356454352957329, guid: c056bc19ffa2c864f92c4041706f0a92, type: 3}
+  - {fileID: 1655647917305249979, guid: acc227c503fa1da4eb078d545365d409, type: 3}
+  - {fileID: 6068914305147814014, guid: 05c2a7341aeb4a74fbe79e98f3ec4950, type: 3}
+  - {fileID: 2998318629582530994, guid: 1b9abae1bc88a8545bce2f69899e9137, type: 3}
+  - {fileID: 1348149743514818372, guid: 35446f3965cdd774ea6aabb80551dea5, type: 3}
   submitChangeButton: {fileID: 286616793}
   customerSpawnPoint: {fileID: 1875209793}
   book1OnTablePositionPoint: {fileID: 1089149567}
