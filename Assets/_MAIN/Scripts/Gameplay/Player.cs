@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
         // Interact only when an object is selected and on mouse button down
         if (selectedObj != null && context.started)
         {
+
             if (selectedObj.TryGetComponent<Interactable>(out Interactable interactableScript) == false)
             {
                 Debug.LogError("ERROR: Cannot get Interactable script Component of " + selectedObj.name);
@@ -90,6 +91,8 @@ public class Player : MonoBehaviour
                     }
                     if (customerQueueManager.cashierStatus == CustomerNDayManager.CurrentCashierStatus.Occcupied)
                         runManager.AddCash(cash.cashAmount);
+
+                    SoundManager.Instance.PlayCashClickSfx();
                     break;
 
                 case InteractType.RemoveCash:
@@ -100,6 +103,8 @@ public class Player : MonoBehaviour
                     }
                     if (customerQueueManager.cashierStatus == CustomerNDayManager.CurrentCashierStatus.Occcupied)
                         runManager.RemoveCash(cash.cashAmount);
+
+                    SoundManager.Instance.PlayCashClickSfx();
                     break;
 
                 case InteractType.SubmitChangeButton:
@@ -109,11 +114,15 @@ public class Player : MonoBehaviour
                     else if (customerQueueManager.GetCurrentCustomer().GetComponent<Customer>().customerType == CustomerType.TalkOnly)
                         Debug.Log("Customer is talk only!");
                     else Debug.Log("No customer present");
+
+                    SoundManager.Instance.PlaySubmitChangeSFX();
                     break;
 
                 case InteractType.TalkToCustomer:
                     customer.StartConversation();
                     selectedObj = null;
+
+                    SoundManager.Instance.PlaySelectInteractionSFX();
                     break;
             }
         }

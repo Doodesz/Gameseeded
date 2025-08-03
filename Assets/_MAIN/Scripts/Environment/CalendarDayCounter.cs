@@ -8,7 +8,7 @@ public class CalendarDayCounter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        text.text = CustomerNDayManager.Instance.GetCurrentDayIndex().ToString() + 1;
+        text.text = (CustomerNDayManager.Instance.GetCurrentDayIndex() + 1).ToString();
     }
 
     // Update is called once per frame

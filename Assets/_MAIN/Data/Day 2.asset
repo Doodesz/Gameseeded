@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Day 2
   m_EditorClassIdentifier: 
   customersInDay:
-  - {fileID: 305742521794511471, guid: 935bb562ab571d5e6b15896c9f1199f8, type: 3}
+  - {fileID: 739956254719879568, guid: 935bb562ab571d5e6b15896c9f1199f8, type: 3}
   - {fileID: 4668388117124759756, guid: 12d87edd16890dd52bcb16dce6efb62e, type: 3}
   - {fileID: 7699281090782142574, guid: 81543821196969648af98e3d9c9bd25b, type: 3}
-  - {fileID: 6409914735653500046, guid: 084331c5f6823041b9c843fae95d7d86, type: 3}
+  - {fileID: 5643647075612914512, guid: 084331c5f6823041b9c843fae95d7d86, type: 3}
   - {fileID: 3740594095013427359, guid: f8b2eb2deba2c6f12a7b803d5aac1214, type: 3}
   - {fileID: 7892880452262097174, guid: ff2cb7465ecadecdbabee41b3970ed6f, type: 3}
   - {fileID: 8484273975222602828, guid: b2a35c68bec67e0c0b056b2a79bca217, type: 3}
