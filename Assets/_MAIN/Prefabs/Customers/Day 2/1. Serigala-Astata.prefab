@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   change: 828
   customerType: 0
-  book1Prefab: {fileID: 3211002941942141716, guid: a5a1c53a8155fa54393844d462174c50, type: 3}
+  book1Prefab: {fileID: 8212804508086923851, guid: 243ee8c7cce98494387efddaa149685c, type: 3}
   book2Prefab: {fileID: 3393871733627880762, guid: d2f45b8d2cd9f9346be0c8d217fb81b2, type: 3}
   book3Prefab: {fileID: 726014420298265660, guid: 2d510a9cfafbf764791d1e2279f6435e, type: 3}
   conversation: {fileID: 819636847254375891}

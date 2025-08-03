@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   change: 850
   customerType: 2
-  book1Prefab: {fileID: 4035441269037404007, guid: 9a7c10b6d9359624cb77508a78cbd1be, type: 3}
+  book1Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
   book2Prefab: {fileID: 3950818229613042119, guid: 7b3c40deda29d29418b95e4135a1a594, type: 3}
   book3Prefab: {fileID: 0}
   conversation: {fileID: 1360959656047485336}
