@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 4862560427186055319}
   - component: {fileID: 6647219041950391593}
   m_Layer: 0
-  m_Name: 2. Kelinci-Bao 1
+  m_Name: 2. Kelinci-Bao
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

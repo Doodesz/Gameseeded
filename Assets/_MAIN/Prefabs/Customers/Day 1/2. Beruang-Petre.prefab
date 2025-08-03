@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 296693913698040217}
   - component: {fileID: 4002710288943853439}
   m_Layer: 0
-  m_Name: Customer Petre 1
+  m_Name: 2. Beruang-Petre
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
