@@ -40,6 +40,7 @@ namespace DialogueEditor
         public bool OptionImageSliced;
         public bool AllowMouseInteraction;
 
+
         // Non-User facing 
         // Not exposed via custom inspector
         // 
@@ -82,6 +83,9 @@ namespace DialogueEditor
         private List<UIConversationButton> m_uiOptions;
         private int m_currentSelectedIndex;
 
+        // Custom added
+        public bool isTimedOut;
+        public float timeoutTime;
 
         //--------------------------------------
         // Awake, Start, Destroy, Update
@@ -136,6 +140,10 @@ namespace DialogueEditor
                     TransitioningDialogueBoxOff_Update();
                     break;
             }
+
+            // Custom added
+            if (timeoutTime > 1f) isTimedOut = false;
+            timeoutTime += Time.deltaTime;
         }
 
 
@@ -192,6 +200,7 @@ namespace DialogueEditor
 
             UIConversationButton button = m_uiOptions[m_currentSelectedIndex];
             button.OnButtonPressed();
+            m_currentSelectedIndex = -1;
         }
 
         public void AlertHover(UIConversationButton button)
@@ -844,6 +853,15 @@ namespace DialogueEditor
                     bool val = (node.ParamActions[i] as SetBoolParamAction).Value;
                     SetBool(name, val);
                 }
+            }
+        }
+
+        public void ClickTimeoutBuffer()
+        {
+            if (!isTimedOut)
+            {
+                isTimedOut = true;
+                timeoutTime = 0;
             }
         }
 
