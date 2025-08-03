@@ -21,10 +21,10 @@ public class CutsceneManager : MonoBehaviour
 
     public void GoToScene()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneTransitionManager.Instance.StartTransitionToScene("Main Menu");
     }
     public void GoToScene(string targetScene)
     {
-        SceneManager.LoadScene(targetScene);
+        SceneTransitionManager.Instance.StartTransitionToScene(targetScene);
     }
 }

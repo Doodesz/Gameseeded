@@ -64,6 +64,8 @@ public class DayEndedBehaviour : MonoBehaviour
 
     void OnDayEnded()
     {
+        bookstoreStatsManager.AdjustStock(-7);
+
         uiAnimator.SetTrigger("displayDayEndedScreen");
 
         customersServedText.text = customersServed.ToString();
@@ -110,17 +112,17 @@ public class DayEndedBehaviour : MonoBehaviour
     {
         SaveCurrentGame();
         if (DayDataContainer.Instance.GetLastDayIndex() == CustomerNDayManager.Instance.GetCurrentDayIndex())
-            SceneManager.LoadScene("Gameplay");
+            SceneTransitionManager.Instance.StartTransitionToScene("Gameplay");
         else
-            SceneManager.LoadScene("Cutscene Epilogue");
-        
+            SceneTransitionManager.Instance.StartTransitionToScene("Cutscene Epilogue");
+
         Debug.Log("Save and continuing...");
     }
 
     public void OnSaveNExitClick()
     {
         SaveCurrentGame();
-        SceneManager.LoadScene("Main Menu");
+        SceneTransitionManager.Instance.StartTransitionToScene("Main Menu");
         
         Debug.Log("Save and quitting...");
     }

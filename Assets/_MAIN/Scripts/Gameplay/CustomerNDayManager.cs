@@ -15,6 +15,7 @@ public class CustomerNDayManager : MonoBehaviour
 
     [Header("Parameters")]
     public List<GameObject> customerQueueList = new List<GameObject>();
+    [SerializeField] float customerSpawnInterval;
 
     [Header("References")]
     [SerializeField] GameObject submitChangeButton;
@@ -93,7 +94,7 @@ public class CustomerNDayManager : MonoBehaviour
         currentCustomer = customerQueue.Peek();
         currentCustomerComponent = currentCustomer.GetComponent<Customer>();
 
-        InvokeRepeating("SpawnCustomer", 5f, 5f);
+        InvokeRepeating("SpawnCustomer", customerSpawnInterval, customerSpawnInterval);
 
         submitChangeButton.SetActive(false);
     }

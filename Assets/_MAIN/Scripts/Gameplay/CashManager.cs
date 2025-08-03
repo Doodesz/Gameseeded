@@ -141,7 +141,7 @@ public class CashManager : MonoBehaviour
     }
     public void UpdateCashRegisterPriceDisplay()
     {
-        randomPrice = Random.Range(1000, 10001);
+        randomPrice = Random.Range(0, 1001);
 
         cashRegPriceDisplayText.text = randomPrice.ToString();
     }

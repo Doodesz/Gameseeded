@@ -11,12 +11,12 @@ public class MainMenuButtons : MonoBehaviour
         SaveGame.Save<int>("moneyStat", 5);
         SaveGame.Save<int>("stockStat", 10);
 
-        SceneManager.LoadScene("Cutscene Prologue");
+        SceneTransitionManager.Instance.StartTransitionToScene("Cutscene Prologue");
     }
 
     public void OnContinueClicked()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneTransitionManager.Instance.StartTransitionToScene("Gameplay");
     }
 
     public void OnQuitClicked()

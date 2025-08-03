@@ -88,6 +88,6 @@ public class GameStateManager : MonoBehaviour
 
     public void ExitGame()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneTransitionManager.Instance.StartTransitionToScene("Main Menu");
     }
 }
