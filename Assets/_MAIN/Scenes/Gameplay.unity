@@ -2193,7 +2193,7 @@ MonoBehaviour:
   book2OnTable: {fileID: 0}
   book3OnTable: {fileID: 0}
   loadDayDataMethod: 0
-  dayDataCustomIndex: 3
+  dayDataCustomIndex: 4
   dayData: {fileID: 0}
   currentCustomer: {fileID: 0}
   currentDayIndex: 0
@@ -2278,6 +2278,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 07f2ac1ca4700f642a32f315584c8ac1, type: 2}
   - {fileID: 11400000, guid: f56dae884cc67194e8a3baeb9d2d49ac, type: 2}
   - {fileID: 11400000, guid: a4bf9bdc317b6684895a81e36e4eb146, type: 2}
+  lastDayIndex: 0
   dayToLoad: {fileID: 0}
 --- !u!114 &322758489
 MonoBehaviour:

@@ -109,8 +109,11 @@ public class DayEndedBehaviour : MonoBehaviour
     public void OnSaveNContinueClick()
     {
         SaveCurrentGame();
-        SceneManager.LoadScene("Gameplay");
-
+        if (DayDataContainer.Instance.GetLastDayIndex() == CustomerNDayManager.Instance.GetCurrentDayIndex())
+            SceneManager.LoadScene("Gameplay");
+        else
+            SceneManager.LoadScene("Cutscene Epilogue");
+        
         Debug.Log("Save and continuing...");
     }
 

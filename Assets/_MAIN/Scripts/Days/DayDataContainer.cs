@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 public class DayDataContainer : MonoBehaviour
 {
-    [Header("Days list")]
+    [Header("Parameters")]
     [SerializeField] List<Day> days;
+    [SerializeField] int lastDayIndex;
 
     [Header("Debugging")]
     [SerializeField] Day dayToLoad;
+
 
     public static DayDataContainer Instance;
 
@@ -22,4 +24,6 @@ public class DayDataContainer : MonoBehaviour
     {
         return days[dayIndex];
     }
+
+    public int GetLastDayIndex()  { return lastDayIndex; }
 }

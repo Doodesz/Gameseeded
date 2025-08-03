@@ -227,6 +227,11 @@ public class CustomerNDayManager : MonoBehaviour
         return currentDayIndex;
     }
 
+    public void SetCurrentDayIndex(int index)
+    {
+        currentDayIndex = index;
+    }
+
     void LoadCustomerData()
     {
         currentDayIndex = SaveGame.Load<int>("lastDay") + 1;
@@ -236,6 +241,7 @@ public class CustomerNDayManager : MonoBehaviour
     }
     void LoadCustomerData(int dayIndex)
     {
+        currentDayIndex = dayIndex;
         dayData = DayDataContainer.Instance.GetDayData(dayIndex);
 
         customerQueueList = DayDataContainer.Instance.GetDayData(dayIndex).customersInDay;
