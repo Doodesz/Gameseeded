@@ -334,11 +334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d2bb7bddd07054e8fc3bce4c9c5599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 2000
-  customerType: 2
+  change: 0
+  customerType: 1
   book1Prefab: {fileID: 7646138829628991614, guid: 7047c93d52b411947bd53a641e380212, type: 3}
-  book2Prefab: {fileID: 0}
-  book3Prefab: {fileID: 0}
+  book2Prefab: {fileID: 3677301566214637032, guid: 079fd5b5d154ad941a5ff604ff72b85a, type: 3}
+  book3Prefab: {fileID: 2408852737574176340, guid: 7b4e1eace9a54a14eb865fd202fd42f8, type: 3}
   conversation: {fileID: 879608986817168026}
   animator: {fileID: 7350908457213660676}
   avatarAnimator: {fileID: 3250885102876739435}
