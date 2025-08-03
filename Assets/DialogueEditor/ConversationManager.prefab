@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3852935656990629450}
   - component: {fileID: 3900108755107041022}
-  - component: {fileID: 808359371095546423}
+  - component: {fileID: 6552088014415238021}
   m_Layer: 5
   m_Name: Panel_Options
   m_TagString: Untagged
@@ -483,7 +483,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3900108755107041016}
   m_CullTransparentMesh: 0
---- !u!114 &808359371095546423
+--- !u!114 &6552088014415238021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -500,15 +500,15 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
-  m_Spacing: 1
+  m_ChildAlignment: 7
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!1 &3900108755395677322
 GameObject:
   m_ObjectHideFlags: 0

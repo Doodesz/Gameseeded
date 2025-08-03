@@ -1998,8 +1998,8 @@ MonoBehaviour:
   book1OnTable: {fileID: 0}
   book2OnTable: {fileID: 0}
   book3OnTable: {fileID: 0}
-  loadDayDataMethod: 0
-  dayDataCustomIndex: 0
+  loadDayDataMethod: 1
+  dayDataCustomIndex: 3
   dayData: {fileID: 0}
   currentCustomer: {fileID: 0}
   currentDayIndex: 0
@@ -2082,6 +2082,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 060a53a76ef0f2d48a8d909c71fbd500, type: 2}
   - {fileID: 11400000, guid: 060ab5aeb10cc75488027b0f2893a383, type: 2}
   - {fileID: 11400000, guid: 07f2ac1ca4700f642a32f315584c8ac1, type: 2}
+  - {fileID: 11400000, guid: f56dae884cc67194e8a3baeb9d2d49ac, type: 2}
+  - {fileID: 11400000, guid: a4bf9bdc317b6684895a81e36e4eb146, type: 2}
   dayToLoad: {fileID: 0}
 --- !u!4 &327580324 stripped
 Transform:
@@ -9814,63 +9816,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &1936678618194478555
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.7523828
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.025000334
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.3510885
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401060915615116019, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3584316269603483715, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
-      propertyPath: m_Name
-      value: Customer Petre
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
 --- !u!1001 &2182809757568258795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10576,4 +10521,3 @@ SceneRoots:
   - {fileID: 911893899}
   - {fileID: 1219807539}
   - {fileID: 992422537}
-  - {fileID: 1936678618194478555}
