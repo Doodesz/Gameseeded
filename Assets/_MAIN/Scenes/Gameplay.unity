@@ -4217,10 +4217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 1
-  priority: 0
+  priority: 1
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: f738169f456a44f46a52d136e0ee52b4, type: 2}
+  sharedProfile: {fileID: 11400000, guid: a094bf131c1222a4e854f6d653ee8637, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -8778,7 +8778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558336652418092414, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
       propertyPath: m_RenderPostProcessing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1760524673199037114, guid: 3ed13b55e54ff9348af03c4eab3a6bf9, type: 3}
       propertyPath: m_SizeDelta.x
