@@ -140,16 +140,16 @@ public class Customer : MonoBehaviour
     public void StartConversation()
     {
         ConversationManager.Instance.StartConversation(conversation);
-        SetConversationParameters();
+        SetupConversationParameters();
     }
 
-    public void FlagHasBeenTalkedTo()
+    public void FlagHasBeenTalkedTo(bool flag)
     {
-        hasBeenTalkedTo = true;
+        hasBeenTalkedTo = flag;
     }
-    public void FlagHasCheckedOut()
+    public void FlagHasCheckedOut(bool flag)
     {
-        hasCheckedOut = true;
+        hasCheckedOut = flag;
     }
     public bool HasTalkedNHasCheckedOut()
     {
@@ -157,7 +157,7 @@ public class Customer : MonoBehaviour
         return false;
     }
 
-    public void SetConversationParameters()
+    public void SetupConversationParameters()
     {
         ConversationManager.Instance.SetBool("hasBeenTalkedTo", hasBeenTalkedTo);
     }

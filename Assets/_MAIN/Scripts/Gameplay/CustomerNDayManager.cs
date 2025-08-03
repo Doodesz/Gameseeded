@@ -134,7 +134,7 @@ public class CustomerNDayManager : MonoBehaviour
 
     void OnChangeSubmit()
     {
-        currentCustomerComponent.FlagHasCheckedOut();
+        currentCustomerComponent.FlagHasCheckedOut(true);
         
         if (currentCustomerComponent.customerType == CustomerType.BuyOnly)
         {
@@ -155,7 +155,7 @@ public class CustomerNDayManager : MonoBehaviour
 
     void OnConversationEnded()
     {
-        currentCustomerComponent.FlagHasBeenTalkedTo();
+        currentCustomerComponent.FlagHasBeenTalkedTo(true);
 
         if (currentCustomerComponent.customerType == CustomerType.TalkOnly)
         {
