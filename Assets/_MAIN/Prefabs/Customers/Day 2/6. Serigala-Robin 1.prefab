@@ -1856,7 +1856,7 @@ GameObject:
   - component: {fileID: 277637798267945644}
   - component: {fileID: 5622752160775507806}
   m_Layer: 0
-  m_Name: 6. Serigala-Robin
+  m_Name: 6. Serigala-Robin 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

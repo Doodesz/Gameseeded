@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 2821799210512950973}
   - component: {fileID: 5222152099689843206}
   m_Layer: 0
-  m_Name: 5. Serigala-Muncuk
+  m_Name: 5. Serigala-Muncuk 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

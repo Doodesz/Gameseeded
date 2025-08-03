@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 5654417280901232099}
   - component: {fileID: 4715074669153915968}
   m_Layer: 0
-  m_Name: 3. Rakun-Marzy
+  m_Name: 3. Rakun-Marzy 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1993,9 +1993,7 @@ MonoBehaviour:
   - {fileID: 1655647917305249979, guid: acc227c503fa1da4eb078d545365d409, type: 3}
   - {fileID: 6068914305147814014, guid: 05c2a7341aeb4a74fbe79e98f3ec4950, type: 3}
   - {fileID: 2998318629582530994, guid: 1b9abae1bc88a8545bce2f69899e9137, type: 3}
-  - {fileID: 5717240508460301946, guid: 92746c30968ffcc4b9d43000df32da99, type: 3}
-  - {fileID: 2049318749926124007, guid: dcaed54d2dc62c94186e8ffd5ccd9f1a, type: 3}
-  - {fileID: 1087513789520997720, guid: 6909d2ed183d94447a3cefa3353d2a87, type: 3}
+  - {fileID: 1348149743514818372, guid: 35446f3965cdd774ea6aabb80551dea5, type: 3}
   submitChangeButton: {fileID: 286616793}
   customerSpawnPoint: {fileID: 1875209793}
   book1OnTablePositionPoint: {fileID: 1089149567}

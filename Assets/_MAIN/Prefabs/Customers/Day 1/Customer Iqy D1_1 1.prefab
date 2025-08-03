@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 1602379997161781402}
   - component: {fileID: 7932969084267346207}
   m_Layer: 0
-  m_Name: 1. Iqy
+  m_Name: Customer Iqy D1_1 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

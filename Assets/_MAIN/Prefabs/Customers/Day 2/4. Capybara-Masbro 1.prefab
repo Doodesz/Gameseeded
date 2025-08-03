@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 79904403734022974}
   - component: {fileID: 8567549833676927471}
   m_Layer: 0
-  m_Name: 4. Capybara-Masbro
+  m_Name: 4. Capybara-Masbro 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

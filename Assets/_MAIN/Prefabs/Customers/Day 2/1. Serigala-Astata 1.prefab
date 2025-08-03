@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2975673109998138383}
   - component: {fileID: 819636847254375891}
   m_Layer: 0
-  m_Name: 1. Serigala-Astata
+  m_Name: 1. Serigala-Astata 1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
