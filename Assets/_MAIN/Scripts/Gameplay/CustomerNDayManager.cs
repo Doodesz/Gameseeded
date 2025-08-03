@@ -229,9 +229,6 @@ public class CustomerNDayManager : MonoBehaviour
 
     void LoadCustomerData()
     {
-        Debug.LogWarning("WARNING: LoadCustomerData() called! Function is not yet implemented!");
-
-
         currentDayIndex = SaveGame.Load<int>("lastDay") + 1;
         dayData = DayDataContainer.Instance.GetDayData(currentDayIndex);
 
