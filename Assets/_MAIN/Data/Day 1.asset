@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6473b11efb48e6469209d3638b5bde9, type: 3}
-  m_Name: Day 4
+  m_Name: Day 1
   m_EditorClassIdentifier: 
   customersInDay:
-  - {fileID: 1611214637088348040, guid: 2154c9b5b6cc5d44da6440627dc63963, type: 3}
-  - {fileID: 9174158644562009633, guid: f52aaa951e7741b4695acc7ec57ec91f, type: 3}
+  - {fileID: 4283419847703721099, guid: 4a24df65d39d8a54393651b69c311145, type: 3}
+  - {fileID: 971673098759245223, guid: 3ab0e7eb26f8879498ec9db894d662ba, type: 3}
