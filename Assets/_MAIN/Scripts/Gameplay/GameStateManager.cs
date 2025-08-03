@@ -1,10 +1,13 @@
 using DialogueEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
     public enum GameState { Playing, OnConversation, Paused, DayEnded };
     public GameState gameState;
+    [Header("References")]
+    [SerializeField] Animator uiAnimator;
     public static GameStateManager Instance;
 
     private void OnEnable()
@@ -59,5 +62,32 @@ public class GameStateManager : MonoBehaviour
         gameState = GameState.DayEnded;
 
         ActivateCursor(true);
+    }
+
+    public void PauseGame()
+    {
+        gameState = GameState.Paused;
+
+        ActivateCursor(true);
+        uiAnimator.SetBool("isPaused", true);
+    }
+    public void ResumeGame()
+    {
+        gameState = GameState.Playing;
+
+        ActivateCursor(false);
+        uiAnimator.SetBool("isPaused", false);
+    }
+
+    // Called when pressing esc
+    public void TogglePauseGame()
+    {
+        if (gameState == GameState.Paused) { ResumeGame(); }
+        else if (gameState == GameState.Playing) { PauseGame(); }
+    }
+
+    public void ExitGame()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
