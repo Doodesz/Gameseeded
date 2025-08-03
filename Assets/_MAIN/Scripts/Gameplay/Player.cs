@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Called in PlayerInput component of Player
     public void Interact(InputAction.CallbackContext context)
     {
         // Interact only when an object is selected and on mouse button down
@@ -116,5 +117,11 @@ public class Player : MonoBehaviour
                     break;
             }
         }
+    }
+
+    // Called in PlayerInput component of Player
+    public void OnEscapePressed()
+    {
+        GameStateManager.Instance.TogglePauseGame();
     }
 }
