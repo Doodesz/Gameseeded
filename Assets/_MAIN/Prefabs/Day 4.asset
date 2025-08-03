@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: Day 4
   m_EditorClassIdentifier: 
   customersInDay:
-    customerList:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+  - {fileID: 1611214637088348040, guid: 2154c9b5b6cc5d44da6440627dc63963, type: 3}
+  - {fileID: 9174158644562009633, guid: f52aaa951e7741b4695acc7ec57ec91f, type: 3}
