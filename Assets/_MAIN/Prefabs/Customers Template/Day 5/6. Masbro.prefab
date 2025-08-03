@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d2bb7bddd07054e8fc3bce4c9c5599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change: 500
+  change: 0
   customerType: 1
   book1Prefab: {fileID: 0}
   book2Prefab: {fileID: 0}

@@ -84,9 +84,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   change: 1999
   customerType: 2
-  book1Prefab: {fileID: 7646138829628991614, guid: 7047c93d52b411947bd53a641e380212, type: 3}
-  book2Prefab: {fileID: 3393871733627880762, guid: d2f45b8d2cd9f9346be0c8d217fb81b2, type: 3}
-  book3Prefab: {fileID: 8255258927685867954, guid: 04d05b6d919452f4bae900e95b50e943, type: 3}
+  book1Prefab: {fileID: 3677301566214637032, guid: 079fd5b5d154ad941a5ff604ff72b85a, type: 3}
+  book2Prefab: {fileID: 8103804548520076651, guid: 902d5b4cc58229844a72ed451fc7158f, type: 3}
+  book3Prefab: {fileID: 3803005796483973868, guid: e9b5be13fee3b284795c78845aab653e, type: 3}
   conversation: {fileID: 8067438356785817990}
   animator: {fileID: 5306824768521607440}
   avatarAnimator: {fileID: 5192950751018221175}
