@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 5424429282508564869}
   - component: {fileID: 22829003219330367}
   m_Layer: 0
-  m_Name: Customer 2_5
+  m_Name: Kelinci-Udin
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

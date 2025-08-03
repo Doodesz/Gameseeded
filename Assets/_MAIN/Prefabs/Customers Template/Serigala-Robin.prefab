@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4696651144623302152}
   - component: {fileID: 3636573945628279174}
   m_Layer: 0
-  m_Name: Customer 4_5
+  m_Name: Serigala-Robin
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
