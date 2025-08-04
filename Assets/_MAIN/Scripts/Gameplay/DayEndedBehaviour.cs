@@ -112,9 +112,9 @@ public class DayEndedBehaviour : MonoBehaviour
     {
         SaveCurrentGame();
         if (DayDataContainer.Instance.GetLastDayIndex() == CustomerNDayManager.Instance.GetCurrentDayIndex())
-            SceneTransitionManager.Instance.StartTransitionToScene("Gameplay");
-        else
             SceneTransitionManager.Instance.StartTransitionToScene("Cutscene Epilogue");
+        else
+            SceneTransitionManager.Instance.StartTransitionToScene("Gameplay");
 
         Debug.Log("Save and continuing...");
     }

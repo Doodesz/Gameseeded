@@ -136,7 +136,8 @@ public class CustomerNDayManager : MonoBehaviour
     void OnChangeSubmit()
     {
         currentCustomerComponent.FlagHasCheckedOut(true);
-        
+        submitChangeButton.SetActive(false);
+
         if (currentCustomerComponent.customerType == CustomerType.BuyOnly)
         {
             currentCustomerComponent.EnableInteraction(false);

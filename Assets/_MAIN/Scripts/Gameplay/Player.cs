@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
         if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing)
         {
             // Always raycast to find an interactable object on reticle
@@ -66,6 +66,10 @@ public class Player : MonoBehaviour
                 InteractPromptBehaviour.Instance.ToggleShowPrompt(false);
             }
         }
+
+        // Fast forward
+        if (Input.GetKey(KeyCode.Comma)) Time.timeScale = 5f;
+        else Time.timeScale = 1f;
     }
 
     // Called in PlayerInput component of Player
