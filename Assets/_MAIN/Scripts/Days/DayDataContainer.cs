@@ -25,5 +25,6 @@ public class DayDataContainer : MonoBehaviour
         return days[dayIndex];
     }
 
-    public int GetLastDayIndex()  { return lastDayIndex; }
+    public int GetLastDayIndex()  
+    { return lastDayIndex; }
 }

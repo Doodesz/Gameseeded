@@ -68,14 +68,14 @@ public class BookstoreStatsManager : MonoBehaviour
 
         if (IsAnyStatDepleted()) Events.onGameOver.Trigger();
     }
-    public void AdjustStock(int amount)
+    public void AdjustStock(int amount, bool ignoreCheck = false)
     {
         stock += amount;
         if (stock > maxStock) stock = maxStock;
 
         UpdateParametersBars();
 
-        if (IsAnyStatDepleted()) Events.onGameOver.Trigger();
+        if (!ignoreCheck && IsAnyStatDepleted()) Events.onGameOver.Trigger();
     }
     #endregion
 
