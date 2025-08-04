@@ -638,6 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasTimeout: 1
   timeoutDuration: 75
+  timeoutTargetScene: Gameplay
 --- !u!1 &1442942720
 GameObject:
   m_ObjectHideFlags: 0

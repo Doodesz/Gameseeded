@@ -57,7 +57,7 @@ public class BookstoreStatsManager : MonoBehaviour
 
         UpdateParametersBars();
 
-        if (trust <= 0) Events.onGameOver.Trigger();
+        if (IsAnyStatDepleted()) Events.onGameOver.Trigger();
     }
     public void AdjustMoney(int amount)
     {
@@ -66,7 +66,7 @@ public class BookstoreStatsManager : MonoBehaviour
 
         UpdateParametersBars();
 
-        if (money <= 0) Events.onGameOver.Trigger();
+        if (IsAnyStatDepleted()) Events.onGameOver.Trigger();
     }
     public void AdjustStock(int amount)
     {
@@ -75,7 +75,7 @@ public class BookstoreStatsManager : MonoBehaviour
 
         UpdateParametersBars();
 
-        if (stock <= 0) Events.onGameOver.Trigger();
+        if (IsAnyStatDepleted()) Events.onGameOver.Trigger();
     }
     #endregion
 
@@ -138,18 +138,24 @@ public class BookstoreStatsManager : MonoBehaviour
     IEnumerator GameOverNoTrust()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Game Over No Trust");
+        SceneTransitionManager.Instance.StartTransitionToScene("Game Over No Trust");
     }
 
     IEnumerator GameOverNoMoney()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Game Over No Money");
+        SceneTransitionManager.Instance.StartTransitionToScene("Game Over No Money");
     }
 
     IEnumerator GameOverNoStock()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Game Over No Stock");
+        SceneTransitionManager.Instance.StartTransitionToScene("Game Over No Stock");
+    }
+
+    bool IsAnyStatDepleted()
+    {
+        if (trust <= 0 || money <= 0 || stock <= 0) return true;
+        return false;
     }
 }

@@ -5,6 +5,7 @@ public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] bool hasTimeout;
     [SerializeField] float timeoutDuration = 75f;
+    [SerializeField] string timeoutTargetScene;
     float timeoutCurrentDuration;
 
     private void Start()
@@ -16,7 +17,7 @@ public class CutsceneManager : MonoBehaviour
     private void Update()
     {
         if (hasTimeout) timeoutCurrentDuration += Time.deltaTime;
-        if (hasTimeout && timeoutCurrentDuration > timeoutDuration) GoToScene("Gameplay");
+        if (hasTimeout && timeoutCurrentDuration > timeoutDuration) GoToScene(timeoutTargetScene);
     }
 
     public void GoToScene()

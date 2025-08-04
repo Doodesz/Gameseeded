@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
                 else outline.enabled = true;
 
                 Events.onSelectNewInteractable.Trigger();
+
+                InteractPromptBehaviour.Instance.ToggleShowPrompt(true);
             }
 
             // Else if not selecting any object, deselect previous selected object
@@ -60,6 +62,8 @@ public class Player : MonoBehaviour
                 selectedObj = null;
 
                 Events.onSelectNewInteractable.Trigger();
+
+                InteractPromptBehaviour.Instance.ToggleShowPrompt(false);
             }
         }
     }
@@ -131,8 +135,7 @@ public class Player : MonoBehaviour
     // Called in PlayerInput component of Player
     public void OnEscapePressed()
     {
-        if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing ||
-            GameStateManager.Instance.gameState == GameStateManager.GameState.OnConversation)      
+        if (GameStateManager.Instance.gameState == GameStateManager.GameState.Playing)      
             GameStateManager.Instance.TogglePauseGame();
     }
 }
